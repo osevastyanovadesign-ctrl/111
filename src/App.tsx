@@ -20,7 +20,7 @@ function Router() {
   return (
     <Switch>
       <Route path="/" component={Home} />
-      <Route path="/project/:id" component={ProjectDetail} />
+      <Route path="/project/:slug" component={ProjectDetail} />
       <Route component={() => <div className="min-h-screen flex items-center justify-center font-mono text-sm opacity-40">404</div>} />
     </Switch>
   );
