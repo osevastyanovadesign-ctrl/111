@@ -47,7 +47,9 @@ function HeroCycleWord() {
 }
 
 export default function Home() {
-  const [introComplete, setIntroComplete] = useState(false);
+  const [introComplete, setIntroComplete] = useState(() => {
+  return sessionStorage.getItem("introComplete") === "true";
+});
   const [, setLocation] = useLocation();
   const heroRef = useRef(null);
 
@@ -66,13 +68,18 @@ export default function Home() {
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "auto";
   }
- }, []);
+}, []);
 
 
   return (
     <div className="bg-background text-foreground selection:bg-accent selection:text-accent-foreground w-full overflow-hidden cursor-none">
       <CustomCursor />
-      <IntroOverlay onComplete={() => setIntroComplete(true)} />
+      <IntroOverlay
+  onComplete={() => {
+    sessionStorage.setItem("introComplete", "true");
+    setIntroComplete(true);
+    }}
+  />
       <SectionIndicator />
 
       {/* 01. Hero ─────────────────────────────────────── */}
