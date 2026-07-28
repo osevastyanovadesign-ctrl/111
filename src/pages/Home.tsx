@@ -433,7 +433,7 @@ export default function Home() {
                 }}
 
                 onClick={() => {
-                  window.location.href = `/project/${project.slug}`;
+                navigate(`/project/${project.slug}`);
                 }}
 
                 className="
