@@ -69,8 +69,8 @@ useEffect(() => {
 }, []);
 
 useEffect(() => {
-  if (sessionStorage.getItem("returnToArchive") === "true") {
-    sessionStorage.removeItem("returnToArchive");
+  if (sessionStorage.getItem("skipIntroToArchive") === "true") {
+    sessionStorage.removeItem("skipIntroToArchive");
 
     setTimeout(() => {
       document.getElementById("projects")?.scrollIntoView({
