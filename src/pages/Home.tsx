@@ -1,4 +1,4 @@
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { useLocation } from "wouter";
 import IntroOverlay from "@/components/IntroOverlay";
@@ -17,41 +17,10 @@ import { MATERIALS } from "@/data/materials";
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 const TRANSITION = { duration: 1.2, ease: EASE };
 
-// The last word cycles; "Пространство как" is fixed
-const CYCLE_WORDS = ["тишина", "воздух", "свет", "дыхание"];
-
-function HeroCycleWord() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => setIndex(i => (i + 1) % CYCLE_WORDS.length), 2600);
-    return () => clearInterval(id);
-  }, []);
-
-  return (
-    <span className="relative inline-block">
-      <AnimatePresence mode="wait">
-        <motion.span
-          key={index}
-          className="inline-block font-serif italic"
-          initial={{ opacity: 0, y: 18 }}
-          animate={{ opacity: 1, y: 0 }}
-          exit={{ opacity: 0, y: -18 }}
-          transition={{ duration: 0.65, ease: [0.16, 1, 0.3, 1] }}
-        >
-          {CYCLE_WORDS[index]}
-        </motion.span>
-      </AnimatePresence>
-    </span>
-  );
-}
-
 export default function Home() {
   const [introComplete, setIntroComplete] = useState(false);
   const [, setLocation] = useLocation();
   const heroRef = useRef(null);
-
-  
 
   useEffect(() => {
   if (!introComplete) {
@@ -65,19 +34,6 @@ export default function Home() {
 useEffect(() => {
   if ("scrollRestoration" in history) {
     history.scrollRestoration = "manual";
-  }
-}, []);
-
-useEffect(() => {
-  if (sessionStorage.getItem("skipIntroToArchive") === "true") {
-    sessionStorage.removeItem("skipIntroToArchive");
-
-    setTimeout(() => {
-      document.getElementById("projects")?.scrollIntoView({
-        behavior: "instant",
-        block: "start",
-      });
-    }, 100);
   }
 }, []);
 
