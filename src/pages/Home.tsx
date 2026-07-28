@@ -18,45 +18,138 @@ import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
 
 
-const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
+const EASE: [number, number, number, number] = [
+  0.16,
+  1,
+  0.3,
+  1
+];
 
 const TRANSITION = {
   duration: 1.2,
-  ease: EASE,
+  ease: EASE
 };
 
 
-export default function Home() {
-  const [introComplete, setIntroComplete] = useState(false);
-  const [, setLocation] = useLocation();
-  const heroRef = useRef(null);
+// The last word cycles; "Пространство как" is fixed
+const CYCLE_WORDS = [
+  "тишина",
+  "воздух",
+  "свет",
+  "дыхание"
+];
+
+
+function HeroCycleWord() {
+
+  const [index, setIndex] = useState(0);
 
 
   useEffect(() => {
-    if (!introComplete) {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant",
-      });
-    }
-  }, [introComplete]);
+
+    const id = setInterval(() => {
+      setIndex(i => (i + 1) % CYCLE_WORDS.length);
+    }, 2600);
 
 
-  useEffect(() => {
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
+    return () => clearInterval(id);
+
   }, []);
 
 
   return (
-    <div className="bg-background text-foreground selection:bg-accent selection:text-accent-foreground w-full overflow-hidden cursor-none">
+    <span className="relative inline-block">
+
+      <AnimatePresence mode="wait">
+
+        <motion.span
+          key={index}
+          className="inline-block font-serif italic"
+          initial={{
+            opacity: 0,
+            y: 18
+          }}
+          animate={{
+            opacity: 1,
+            y: 0
+          }}
+          exit={{
+            opacity: 0,
+            y: -18
+          }}
+          transition={{
+            duration: 0.65,
+            ease: [0.16, 1, 0.3, 1]
+          }}
+        >
+          {CYCLE_WORDS[index]}
+
+        </motion.span>
+
+      </AnimatePresence>
+
+    </span>
+  );
+}
+
+
+
+export default function Home() {
+
+  const [introComplete, setIntroComplete] = useState(false);
+
+  const [, setLocation] = useLocation();
+
+  const heroRef = useRef(null);
+
+
+
+  useEffect(() => {
+
+    if (!introComplete) {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+
+    }
+
+  }, [introComplete]);
+
+
+
+  useEffect(() => {
+
+    if ("scrollRestoration" in history) {
+
+      history.scrollRestoration = "manual";
+
+    }
+
+  }, []);
+
+
+
+  return (
+
+    <div className="
+      bg-background 
+      text-foreground 
+      selection:bg-accent 
+      selection:text-accent-foreground 
+      w-full 
+      overflow-hidden 
+      cursor-none
+    ">
 
       <CustomCursor />
+
 
       <IntroOverlay
         onComplete={() => setIntroComplete(true)}
       />
+
 
       <SectionIndicator />
 
