@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useParams, useLocation } from "wouter";
+import { useParams } from "wouter";
 import { useEffect } from "react";
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
@@ -9,17 +9,11 @@ const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
-  const [, navigate] = useLocation();
 
   const project = PROJECTS.find(p => p.slug === slug);
 
   useEffect(() => {
-    if (performance.navigation.type === 1) {
-      window.location.href = "/";
-      return;
-    }
-
-    window.scrollTo(0, 0);
+  window.scrollTo(0, 0);
   }, [slug]);
 
   if (!project) {
