@@ -1,6 +1,7 @@
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { useRef, useState, useEffect } from "react";
 import { useLocation } from "wouter";
+
 import IntroOverlay from "@/components/IntroOverlay";
 import MaterialsCollage from "@/components/MaterialsCollage";
 import ExpertiseSection from "@/components/ExpertiseSection";
@@ -9,43 +10,55 @@ import CustomCursor from "@/components/CustomCursor";
 import SectionIndicator from "@/components/SectionIndicator";
 import MarqueeTicker from "@/components/MarqueeTicker";
 import TestimonialsSection from "@/components/TestimonialsSection";
+
 import heroImage from "@assets/generated_images/hero-interior.jpg";
 import philosophyImage from "@assets/generated_images/moscow-3.jpg";
+
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
 
+
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
-const TRANSITION = { duration: 1.2, ease: EASE };
+
+const TRANSITION = {
+  duration: 1.2,
+  ease: EASE,
+};
+
 
 export default function Home() {
   const [introComplete, setIntroComplete] = useState(false);
   const [, setLocation] = useLocation();
   const heroRef = useRef(null);
 
+
   useEffect(() => {
-  if (!introComplete) {
-    window.scrollTo({
-      top: 0,
-      behavior: "instant",
-    });
-  }
-}, [introComplete]);
+    if (!introComplete) {
+      window.scrollTo({
+        top: 0,
+        behavior: "instant",
+      });
+    }
+  }, [introComplete]);
 
-useEffect(() => {
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "manual";
-  }
-}, []);
 
- return (
-  <div className="bg-background text-foreground selection:bg-accent selection:text-accent-foreground w-full overflow-hidden cursor-none">
-    <CustomCursor />
+  useEffect(() => {
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "manual";
+    }
+  }, []);
 
-    <IntroOverlay
-      onComplete={() => setIntroComplete(true)}
-    />
 
-    <SectionIndicator />
+  return (
+    <div className="bg-background text-foreground selection:bg-accent selection:text-accent-foreground w-full overflow-hidden cursor-none">
+
+      <CustomCursor />
+
+      <IntroOverlay
+        onComplete={() => setIntroComplete(true)}
+      />
+
+      <SectionIndicator />
 
       {/* 01. Hero ─────────────────────────────────────── */}
       <section 
