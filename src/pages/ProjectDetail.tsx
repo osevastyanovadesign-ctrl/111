@@ -62,7 +62,7 @@ export default function ProjectDetail() {
       {/* Back button */}
       <motion.button
         onClick={() => {
-        sessionStorage.setItem("returnToArchive", "true");
+        sessionStorage.setItem("skipIntroToArchive", "true");
         window.location.href = "/111/";
        }}
         initial={{ opacity: 0 }}
