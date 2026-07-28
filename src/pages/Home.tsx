@@ -51,7 +51,12 @@ export default function Home() {
   const [, setLocation] = useLocation();
   const heroRef = useRef(null);
 
-  const archiveRef = useRef<HTMLDivElement>(null);
+  useEffect(() => {
+  if (sessionStorage.getItem("returnFromProject") === "true") {
+    sessionStorage.removeItem("returnFromProject");
+    setIntroComplete(true);
+  }
+}, []);
 
   useEffect(() => {
     if (!introComplete) {
