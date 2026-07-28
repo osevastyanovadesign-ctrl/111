@@ -51,30 +51,16 @@ export default function Home() {
   const [, setLocation] = useLocation();
   const heroRef = useRef(null);
 
-  useEffect(() => {
-    if (sessionStorage.getItem("returnFromProject") === "true") {
-      setTimeout(() => {
-        document.getElementById("projects")?.scrollIntoView({
-          behavior: "instant",
-          block: "start",
-        });
-
-        sessionStorage.removeItem("returnFromProject");
-      }, 100);
-    }
-  }, []);
+  
 
   useEffect(() => {
-    if (
-      !introComplete &&
-      sessionStorage.getItem("returnFromProject") !== "true"
-    ) {
-      window.scrollTo({
-        top: 0,
-        behavior: "instant",
-      });
-    }
-  }, [introComplete]);
+  if (!introComplete) {
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+  }
+}, [introComplete]);
 
   useEffect(() => {
     if ("scrollRestoration" in history) {
