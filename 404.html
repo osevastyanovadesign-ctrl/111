@@ -4,8 +4,17 @@
   <meta charset="utf-8">
   <title>Redirecting...</title>
   <script>
-    sessionStorage.redirect = location.href;
-    location.replace('/111/');
+    (function () {
+      var path = window.location.pathname;
+      var repo = "/111";
+
+      if (path.startsWith(repo)) {
+        var redirect = path.replace(repo, "") + window.location.search;
+        sessionStorage.setItem("redirect", redirect);
+      }
+
+      window.location.replace(repo + "/");
+    })();
   </script>
 </head>
 <body>
