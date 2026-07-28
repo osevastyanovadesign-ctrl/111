@@ -7,16 +7,6 @@ const queryClient = new QueryClient();
 
 function Router() {
 
-  const nav = performance.getEntriesByType("navigation")[0] as PerformanceNavigationTiming;
-
-  if (
-    nav.type === "reload" &&
-    window.location.pathname.startsWith("/project/")
-  ) {
-    window.location.replace("/");
-    return null;
-  }
-
   return (
     <Switch>
       <Route path="/" component={Home} />
