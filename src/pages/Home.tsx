@@ -63,12 +63,10 @@ export default function Home() {
   }, [introComplete]);
 
   useEffect(() => {
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-
-    window.scrollTo(0, 0);
-  }, []);
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "auto";
+  }
+ }, []);
 
 
   return (
