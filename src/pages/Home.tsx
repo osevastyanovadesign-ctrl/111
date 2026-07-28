@@ -52,22 +52,23 @@ export default function Home() {
   const heroRef = useRef(null);
 
   useEffect(() => {
-  if (sessionStorage.getItem("returnFromProject") === "true") {
-    sessionStorage.removeItem("returnFromProject");
-
-    setTimeout(() => {
-      document
-        .getElementById("projects")
-        ?.scrollIntoView({
+    if (sessionStorage.getItem("returnFromProject") === "true") {
+      setTimeout(() => {
+        document.getElementById("projects")?.scrollIntoView({
           behavior: "instant",
           block: "start",
         });
-    }, 100);
-  }
-}, []);
+
+        sessionStorage.removeItem("returnFromProject");
+      }, 100);
+    }
+  }, []);
 
   useEffect(() => {
-    if (!introComplete) {
+    if (
+      !introComplete &&
+      sessionStorage.getItem("returnFromProject") !== "true"
+    ) {
       window.scrollTo({
         top: 0,
         behavior: "instant",
@@ -76,11 +77,10 @@ export default function Home() {
   }, [introComplete]);
 
   useEffect(() => {
-  if ("scrollRestoration" in history) {
-    history.scrollRestoration = "auto";
-  }
-}, []);
-
+    if ("scrollRestoration" in history) {
+      history.scrollRestoration = "auto";
+    }
+  }, []);
 
   return (
     <div className="bg-background text-foreground selection:bg-accent selection:text-accent-foreground w-full overflow-hidden cursor-none">
