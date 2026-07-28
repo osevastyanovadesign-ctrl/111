@@ -12,52 +12,37 @@ interface IntroOverlayProps {
 
 export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
 
-  const skipIntro =
-    sessionStorage.getItem("returnFromProject") === "true";
-
-  const [visible, setVisible] = useState(!skipIntro);
-  const [textVisible, setTextVisible] = useState(!skipIntro);
+  const [visible, setVisible] = useState(true);
+  const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
-
-    if (skipIntro) {
-      sessionStorage.removeItem("returnFromProject");
-      onComplete?.();
-      return;
-    }
-
     document.body.style.overflow = "hidden";
     window.scrollTo(0, 0);
 
     return () => {
       document.body.style.overflow = "";
     };
+  }, []);
 
-  }, [skipIntro, onComplete]);
   useEffect(() => {
+    const t1 = setTimeout(() => setTextVisible(true), 200);
 
-  if (skipIntro) {
-    return;
-  }
+    const t2 = setTimeout(() => {
+      setVisible(false);
 
-  const t1 = setTimeout(() => setTextVisible(true), 200);
+      setTimeout(() => {
+        document.body.style.overflow = "";
+        onComplete?.();
+      }, 950);
 
-  const t2 = setTimeout(() => {
-    setVisible(false);
+    }, 2700);
 
-    setTimeout(() => {
-      document.body.style.overflow = "";
-      onComplete?.();
-    }, 950);
+    return () => {
+      clearTimeout(t1);
+      clearTimeout(t2);
+    };
 
-  }, 2700);
-
-  return () => {
-    clearTimeout(t1);
-    clearTimeout(t2);
-  };
-
- }, [onComplete, skipIntro]);
+  }, [onComplete]);
 
   return (
     <AnimatePresence>
