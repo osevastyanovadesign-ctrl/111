@@ -51,7 +51,7 @@ export default function Home() {
   const [, setLocation] = useLocation();
   const heroRef = useRef(null);
 
-  const [introComplete, setIntroComplete] = useState(false);
+  const archiveRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     if (!introComplete) {
