@@ -62,11 +62,24 @@ export default function Home() {
   }
 }, [introComplete]);
 
-  useEffect(() => {
-    if ("scrollRestoration" in history) {
-      history.scrollRestoration = "manual";
-    }
-  }, []);
+useEffect(() => {
+  if ("scrollRestoration" in history) {
+    history.scrollRestoration = "manual";
+  }
+}, []);
+
+useEffect(() => {
+  if (sessionStorage.getItem("returnToArchive") === "true") {
+    sessionStorage.removeItem("returnToArchive");
+
+    setTimeout(() => {
+      document.getElementById("projects")?.scrollIntoView({
+        behavior: "instant",
+        block: "start",
+      });
+    }, 100);
+  }
+}, []);
 
  return (
   <div className="bg-background text-foreground selection:bg-accent selection:text-accent-foreground w-full overflow-hidden cursor-none">
