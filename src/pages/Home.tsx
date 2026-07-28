@@ -48,7 +48,7 @@ function HeroCycleWord() {
 
 export default function Home() {
   const [introComplete, setIntroComplete] = useState(false);
-  const [, navigate] = useLocation();
+  const [, setLocation] = useLocation();
   const heroRef = useRef(null);
 
   const archiveRef = useRef<HTMLDivElement>(null);
@@ -433,7 +433,7 @@ export default function Home() {
                 }}
 
                 onClick={() => {
-                navigate(`/project/${project.slug}`);
+                setLocation(`/project/${project.slug}`);
                 }}
 
                 className="
