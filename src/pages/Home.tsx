@@ -68,17 +68,15 @@ export default function Home() {
     }
   }, []);
 
-  return (
-    <div className="bg-background text-foreground selection:bg-accent selection:text-accent-foreground w-full overflow-hidden cursor-none">
-      <CustomCursor />
-      <IntroOverlay
-       onComplete={() => {
-       requestAnimationFrame(() => {
-       setIntroComplete(true);
-      });
-     }}
-   />
-      <SectionIndicator />
+ return (
+  <div className="bg-background text-foreground selection:bg-accent selection:text-accent-foreground w-full overflow-hidden cursor-none">
+    <CustomCursor />
+
+    <IntroOverlay
+      onComplete={() => setIntroComplete(true)}
+    />
+
+    <SectionIndicator />
 
       {/* 01. Hero ─────────────────────────────────────── */}
       <section 
