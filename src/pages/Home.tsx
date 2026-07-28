@@ -51,12 +51,7 @@ export default function Home() {
   const [, setLocation] = useLocation();
   const heroRef = useRef(null);
 
-  useEffect(() => {
-  if (sessionStorage.getItem("returnFromProject") === "true") {
-    sessionStorage.removeItem("returnFromProject");
-    setIntroComplete(true);
-  }
-}, []);
+  const [introComplete, setIntroComplete] = useState(false);
 
   useEffect(() => {
     if (!introComplete) {
