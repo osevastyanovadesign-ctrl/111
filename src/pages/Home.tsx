@@ -203,7 +203,7 @@ export default function Home() {
             src={heroImage}
             alt="Minimalist interior"
             initial={{ opacity: 0, scale: 1.04 }}
-            animate={introComplete ? { opacity: 0.85, scale: 1 } : {}}
+            animate={introComplete ? { opacity: 0.85 } : {}}
             transition={{
               duration: 1.8,
               ease: [0.16, 1, 0.3, 1],
