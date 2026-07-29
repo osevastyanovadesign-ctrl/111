@@ -121,13 +121,24 @@ export default function Home() {
 
   useEffect(() => {
 
-    if ("scrollRestoration" in history) {
+  if ("scrollRestoration" in history) {
 
-      history.scrollRestoration = "manual";
+    history.scrollRestoration = "manual";
 
-    }
+  }
 
-  }, []);
+  const returnTo = sessionStorage.getItem("returnTo");
+
+  if (!returnTo) {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "instant",
+    });
+
+  }
+
+}, []);
   useEffect(() => {
 
   const returnTo = sessionStorage.getItem("returnTo");
@@ -137,12 +148,14 @@ export default function Home() {
     sessionStorage.removeItem("returnTo");
 
     setTimeout(() => {
+
       document
         .getElementById("projects")
         ?.scrollIntoView({
           behavior: "smooth",
         });
-    }, 100);
+
+    }, 300);
 
   }
 
