@@ -128,6 +128,25 @@ export default function Home() {
     }
 
   }, []);
+  useEffect(() => {
+
+  const returnTo = sessionStorage.getItem("returnTo");
+
+  if (returnTo === "projects") {
+
+    sessionStorage.removeItem("returnTo");
+
+    setTimeout(() => {
+      document
+        .getElementById("projects")
+        ?.scrollIntoView({
+          behavior: "smooth",
+        });
+    }, 100);
+
+  }
+
+}, []);
 
 
 
