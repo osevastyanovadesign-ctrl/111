@@ -31,7 +31,25 @@ const TRANSITION = {
 };
 
     return () => clearInterval(id);
+// The last word cycles; "Пространство как" is fixed
+const CYCLE_WORDS = [
+  "тишина",
+  "воздух",
+  "свет",
+  "дыхание"
+];
 
+
+function HeroCycleWord() {
+
+  const [index, setIndex] = useState(0);
+
+
+  useEffect(() => {
+
+    const id = setInterval(() => {
+      setIndex(i => (i + 1) % CYCLE_WORDS.length);
+    }, 2600);
   }, []);
 
 
