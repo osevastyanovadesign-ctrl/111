@@ -178,9 +178,11 @@ export default function Home() {
       <CustomCursor />
 
 
-      <IntroOverlay
-        onComplete={() => setIntroComplete(true)}
-      />
+      {sessionStorage.getItem("returnTo") !== "projects" && (
+  <IntroOverlay
+    onComplete={() => setIntroComplete(true)}
+  />
+)}
 
 
       <SectionIndicator />
