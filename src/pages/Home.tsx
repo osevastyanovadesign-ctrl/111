@@ -149,13 +149,13 @@ export default function Home() {
 
     setTimeout(() => {
 
-      document
-        .getElementById("projects")
-        ?.scrollIntoView({
-          behavior: "smooth",
-        });
+  document
+    .getElementById("projects")
+    ?.scrollIntoView({
+      behavior: "instant",
+    });
 
-    }, 300);
+}, 50);
 
   }
 
