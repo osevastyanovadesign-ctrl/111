@@ -11,18 +11,25 @@ interface IntroOverlayProps {
 }
 
 export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
+  const skipIntro = sessionStorage.getItem("returnTo") === "projects";
 
   const [visible, setVisible] = useState(true);
   const [textVisible, setTextVisible] = useState(false);
 
   useEffect(() => {
-    document.body.style.overflow = "hidden";
-    window.scrollTo(0, 0);
 
-    return () => {
-      document.body.style.overflow = "";
-    };
-  }, []);
+  if (skipIntro) {
+    return;
+  }
+
+  document.body.style.overflow = "hidden";
+  window.scrollTo(0, 0);
+
+  return () => {
+    document.body.style.overflow = "";
+  };
+
+}, [skipIntro]);
 
   useEffect(() => {
     const t1 = setTimeout(() => setTextVisible(true), 200);
