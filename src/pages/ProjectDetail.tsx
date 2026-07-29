@@ -61,16 +61,16 @@ export default function ProjectDetail() {
       />
 
       {/* Back button */}
-<motion.button
-  onClick={() => {
-    sessionStorage.setItem("returnTo", "projects");
-    navigate("/");
-  }}
-  initial={{ opacity: 0 }}
-  animate={{ opacity: 1 }}
-  transition={{ duration: 0.6, delay: 0.2 }}
-  className="
-      fixed top-6 left-6
+      <motion.button
+        onClick={() => {
+  sessionStorage.setItem("returnTo", "projects");
+  navigate("/");
+       }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.6, delay: 0.2 }}
+        className="
+            fixed top-6 left-6
             md:top-8 md:left-8
             z-50
             flex items-center gap-3
