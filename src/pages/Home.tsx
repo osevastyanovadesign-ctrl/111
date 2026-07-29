@@ -509,8 +509,9 @@ export default function Home() {
                 }}
 
                 onClick={() => {
+                sessionStorage.setItem("returnTo", "projects");
                 setLocation(`/project/${project.slug}`);
-                }}
+               }}
 
                 className="
                   relative
