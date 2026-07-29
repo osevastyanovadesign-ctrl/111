@@ -178,11 +178,9 @@ if (returnTo === "projects") {
       <CustomCursor />
 
 
-      {sessionStorage.getItem("returnTo") !== "projects" && (
   <IntroOverlay
     onComplete={() => setIntroComplete(true)}
   />
-)}
 
 
       <SectionIndicator />
