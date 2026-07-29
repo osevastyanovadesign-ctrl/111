@@ -143,21 +143,21 @@ export default function Home() {
 
   const returnTo = sessionStorage.getItem("returnTo");
 
-  if (returnTo === "projects") {
+if (returnTo === "projects") {
 
-    sessionStorage.removeItem("returnTo");
+  sessionStorage.removeItem("returnTo");
 
-    setTimeout(() => {
+  setTimeout(() => {
 
-      document
-        .getElementById("projects")
-        ?.scrollIntoView({
-          behavior: "smooth",
-        });
+    document
+      .getElementById("projects")
+      ?.scrollIntoView({
+        behavior: "auto",
+      });
 
-    }, 50);
+  }, 50);
 
-  }
+}
 
 }, []);
 
