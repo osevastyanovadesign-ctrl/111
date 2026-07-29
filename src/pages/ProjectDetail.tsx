@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { useParams } from "wouter";
+import { useParams, useLocation } from "wouter";
 import { useEffect } from "react";
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
@@ -9,6 +9,7 @@ const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
+  const [, navigate] = useLocation();
 
   const project = PROJECTS.find(p => p.slug === slug);
 
@@ -62,8 +63,8 @@ export default function ProjectDetail() {
       {/* Back button */}
       <motion.button
         onClick={() => {
-        sessionStorage.setItem("skipIntroToArchive", "true");
-        window.location.href = "/111/";
+  sessionStorage.setItem("returnTo", "projects");
+  navigate("/");
        }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
