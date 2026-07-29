@@ -96,11 +96,21 @@ function HeroCycleWord() {
 
 export default function Home() {
 
-  const [introComplete, setIntroComplete] = useState(false);
+  const [introComplete, setIntroComplete] = useState(() => {
+    return sessionStorage.getItem("returnTo") !== null;
+  });
 
   const [, setLocation] = useLocation();
 
   const heroRef = useRef(null);
+
+  useEffect(() => {
+    const returnTo = sessionStorage.getItem("returnTo");
+
+    if (returnTo) {
+      sessionStorage.removeItem("returnTo");
+    }
+  }, []);
 
 
 
