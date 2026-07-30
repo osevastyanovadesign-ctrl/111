@@ -311,7 +311,7 @@ return (
           <motion.img
             src={heroImage}
             alt="Minimalist interior"
-            initial={{ opacity: 0 }}
+            initial={{ opacity: 0, scale: 1.04 }}
             animate={introComplete ? { opacity: 0.85, scale: 1 } : {}}
             transition={{
               duration: 1.8,
