@@ -143,22 +143,22 @@ export default function Home() {
 
   const returnTo = sessionStorage.getItem("returnTo");
 
-  if (returnTo === "projects") {
+if (returnTo === "projects") {
 
-    sessionStorage.removeItem("returnTo");
+  sessionStorage.removeItem("returnTo");
 
-    setTimeout(() => {
+  setTimeout(() => {
 
-      document
-        .getElementById("projects")
-        ?.scrollIntoView({
-          behavior: "auto",
-          block: "start",
-        });
+    document
+  .getElementById("projects")
+  ?.scrollIntoView({
+    behavior: "instant",
+    block: "start",
+  });
 
-    }, 0);
+  }, 0);
 
-  }
+}
 
 }, []);
 
@@ -521,24 +521,15 @@ return (
 
                 data-project-card
 
-                initial={{
-  opacity: 0,
-  y: 30
-}}
+                initial={false}
 
-whileInView={{
+animate={{
   opacity: 1,
   y: 0
 }}
 
-viewport={{
-  once: true
-}}
-
 transition={{
-  duration: 0.8,
-  delay: i * 0.1,
-  ease: EASE
+  duration: 0
 }}
 
                 onClick={() => {
