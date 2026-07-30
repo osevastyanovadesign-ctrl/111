@@ -96,10 +96,7 @@ function HeroCycleWord() {
 
 export default function Home() {
 
-  const skipIntro =
-  sessionStorage.getItem("skipIntroToArchive") === "true";
-
-const [introComplete, setIntroComplete] = useState(skipIntro);
+  const [introComplete, setIntroComplete] = useState(false);
 
   const [, setLocation] = useLocation();
 
@@ -181,11 +178,9 @@ return (
       <CustomCursor />
 
 
-  {!skipIntro && (
   <IntroOverlay
-    onComplete={() => setIntroComplete(true)}
-  />
-)}
+  onComplete={() => setIntroComplete(true)}
+/>
 
 
       <SectionIndicator />
