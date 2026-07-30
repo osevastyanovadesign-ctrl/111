@@ -150,10 +150,11 @@ if (returnTo === "projects") {
   setTimeout(() => {
 
     document
-      .getElementById("projects")
-      ?.scrollIntoView({
-        behavior: "auto",
-      });
+  .getElementById("projects")
+  ?.scrollIntoView({
+    behavior: "instant",
+    block: "start",
+  });
 
   }, 50);
 
