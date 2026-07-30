@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
 import CustomCursor from "@/components/CustomCursor";
+import { useLocation } from "wouter";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
@@ -64,7 +65,7 @@ export default function ProjectDetail() {
       <motion.button
         onClick={() => {
   sessionStorage.setItem("returnTo", "projects");
-  window.location.href = "/111/";
+  setLocation("/");
 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
