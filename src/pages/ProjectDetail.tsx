@@ -65,8 +65,7 @@ export default function ProjectDetail() {
       {/* Back button */}
       <motion.button
         onClick={() => {
-  sessionStorage.setItem("returnTo", "projects");
-  setLocation("/");
+  window.history.back();
 }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
