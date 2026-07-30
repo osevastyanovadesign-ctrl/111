@@ -99,10 +99,12 @@ export default function Home() {
 
   const [introComplete, setIntroComplete] = useState(false);
 
+  const isReturning =
+    sessionStorage.getItem("returnTo") === "projects";
+
   const [, setLocation] = useLocation();
 
   const heroRef = useRef(null);
-
 
 
   useEffect(() => {
@@ -180,9 +182,11 @@ return (
       <CustomCursor />
 
 
+  {!isReturning && (
   <IntroOverlay
-  onComplete={() => setIntroComplete(true)}
-/>
+    onComplete={() => setIntroComplete(true)}
+  />
+)}
 
 
       <SectionIndicator />
