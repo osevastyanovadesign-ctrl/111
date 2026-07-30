@@ -16,14 +16,20 @@ export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
   const [visible, setVisible] = useState(!skipIntro);
   const [textVisible, setTextVisible] = useState(false);
 
-  useEffect(() => {
+ useEffect(() => {
+
+  if (skipIntro) {
+    return;
+  }
+
   document.body.style.overflow = "hidden";
   window.scrollTo(0, 0);
 
   return () => {
     document.body.style.overflow = "";
   };
-}, []);
+
+}, [skipIntro]);
 
   useEffect(() => {
     const t1 = setTimeout(() => setTextVisible(true), 200);
