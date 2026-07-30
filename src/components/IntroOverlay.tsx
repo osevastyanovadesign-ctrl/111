@@ -12,6 +12,7 @@ interface IntroOverlayProps {
 
 export default function IntroOverlay({ onComplete }: IntroOverlayProps) {
   const skipIntro = sessionStorage.getItem("returnTo") === "projects";
+  console.log("INTRO OVERLAY");
 
   const [visible, setVisible] = useState(!skipIntro);
   const [textVisible, setTextVisible] = useState(false);
