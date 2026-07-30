@@ -1,5 +1,5 @@
 import { motion, AnimatePresence } from "framer-motion";
-import { useRef, useState, useEffect, useLayoutEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import { useLocation } from "wouter";
 
 import IntroOverlay from "@/components/IntroOverlay";
@@ -139,7 +139,7 @@ export default function Home() {
   }
 
 }, []);
-  useLayoutEffect(() => {
+  useEffect(() => {
 
   const returnTo = sessionStorage.getItem("returnTo");
 
@@ -147,12 +147,16 @@ export default function Home() {
 
     sessionStorage.removeItem("returnTo");
 
-    document
-      .getElementById("projects")
-      ?.scrollIntoView({
-        behavior: "instant",
-        block: "start",
-      });
+    setTimeout(() => {
+
+      document
+        .getElementById("projects")
+        ?.scrollIntoView({
+          behavior: "auto",
+          block: "start",
+        });
+
+    }, 0);
 
   }
 
