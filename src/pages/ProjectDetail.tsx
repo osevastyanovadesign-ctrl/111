@@ -4,11 +4,13 @@ import { useEffect } from "react";
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
 import CustomCursor from "@/components/CustomCursor";
+import { useLocation } from "wouter";
 
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function ProjectDetail() {
   const { slug } = useParams<{ slug: string }>();
+  const [, setLocation] = useLocation();
 
   const project = PROJECTS.find(p => p.slug === slug);
 
@@ -62,9 +64,9 @@ export default function ProjectDetail() {
       {/* Back button */}
       <motion.button
         onClick={() => {
-        sessionStorage.setItem("skipIntroToArchive", "true");
-        window.location.href = "/111/";
-       }}
+  sessionStorage.setItem("returnTo", "projects");
+  setLocation("/");
+}}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 0.6, delay: 0.2 }}
