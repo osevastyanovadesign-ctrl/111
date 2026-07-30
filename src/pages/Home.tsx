@@ -521,15 +521,24 @@ return (
 
                 data-project-card
 
-                initial={false}
+                initial={{
+  opacity: 0,
+  y: 30
+}}
 
-animate={{
+whileInView={{
   opacity: 1,
   y: 0
 }}
 
+viewport={{
+  once: true
+}}
+
 transition={{
-  duration: 0
+  duration: 0.8,
+  delay: i * 0.1,
+  ease: EASE
 }}
 
                 onClick={() => {
