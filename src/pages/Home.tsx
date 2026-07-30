@@ -161,26 +161,29 @@ if (returnTo === "projects") {
 
 }, []);
 
+const skipIntro =
+  sessionStorage.getItem("skipIntroToArchive") === "true";
 
+return (
 
-  return (
-
-    <div className="
-      bg-background 
-      text-foreground 
-      selection:bg-accent 
-      selection:text-accent-foreground 
-      w-full 
-      overflow-hidden 
-      cursor-none
-    ">
+  <div className="
+    bg-background
+    text-foreground
+    selection:bg-accent
+    selection:text-accent-foreground
+    w-full
+    overflow-hidden
+    cursor-none
+  ">
 
       <CustomCursor />
 
 
+  {!skipIntro && (
   <IntroOverlay
     onComplete={() => setIntroComplete(true)}
   />
+)}
 
 
       <SectionIndicator />
