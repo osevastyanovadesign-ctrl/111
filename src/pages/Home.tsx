@@ -96,7 +96,10 @@ function HeroCycleWord() {
 
 export default function Home() {
 
-  const [introComplete, setIntroComplete] = useState(false);
+  const skipIntro =
+  sessionStorage.getItem("skipIntroToArchive") === "true";
+
+const [introComplete, setIntroComplete] = useState(skipIntro);
 
   const [, setLocation] = useLocation();
 
@@ -161,8 +164,7 @@ if (returnTo === "projects") {
 
 }, []);
 
-const skipIntro =
-  sessionStorage.getItem("skipIntroToArchive") === "true";
+
 
 return (
 
