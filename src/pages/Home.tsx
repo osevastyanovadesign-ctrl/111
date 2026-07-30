@@ -521,24 +521,16 @@ return (
 
                 data-project-card
 
-                initial={{
-                opacity: 0,
-               y: 30
-              }}
+                initial={false}
 
-              whileInView={{
-               opacity: 1,
-               y: 0
-              }}
+animate={{
+  opacity: 1,
+  y: 0
+}}
 
-              viewport={{
-              once: true
-               }}
-                transition={{
-                  duration: 0.8,
-                  delay: i * 0.1,
-                  ease: EASE
-                }}
+transition={{
+  duration: 0
+}}
 
                 onClick={() => {
                 sessionStorage.setItem("returnTo", "projects");
