@@ -209,73 +209,7 @@ export default function ProjectDetail() {
           </div>
 
         </motion.div>
-
-
-      {/* Project Gallery */}
-
-      <motion.div
-        className="
-          max-w-7xl mx-auto
-          px-6 md:px-24
-          mb-24
-        "
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{
-          duration: 1,
-          ease: EASE,
-          delay: 0.55
-        }}
-      >
-
-        <div className="mb-8">
-          <span
-            className="
-              font-mono
-              text-[0.6rem]
-              uppercase
-              tracking-[0.25em]
-              opacity-40
-            "
-          >
-            Галерея проекта
-          </span>
         </div>
-
-
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-6">
-
-          <div className="md:col-span-7 aspect-[4/3] overflow-hidden">
-            <motion.img
-              src={project.photos[1]}
-              alt={`${project.title} — фото 2`}
-              className="w-full h-full object-cover"
-              whileHover={{ scale: 1.03 }}
-              transition={{
-                duration: 1.5,
-                ease: EASE
-              }}
-            />
-          </div>
-
-
-          <div className="md:col-span-5 aspect-[3/4] overflow-hidden">
-            <motion.img
-              src={project.photos[2]}
-              alt={`${project.title} — фото 3`}
-              className="w-full h-full object-cover"
-              whileHover={{ scale: 1.03 }}
-              transition={{
-                duration: 1.5,
-                ease: EASE
-              }}
-            />
-          </div>
-
-        </div>
-
-      </motion.div>
-
       {/* Materials */}
 
       <motion.div
