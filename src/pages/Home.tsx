@@ -95,6 +95,7 @@ function HeroCycleWord() {
 
 
 export default function Home() {
+  console.log("HOME MOUNT");
 
   const [introComplete, setIntroComplete] = useState(false);
 
