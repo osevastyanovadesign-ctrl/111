@@ -97,7 +97,9 @@ function HeroCycleWord() {
 export default function Home() {
   console.log("HOME MOUNT");
 
-  const [introComplete, setIntroComplete] = useState(false);
+  const [introComplete, setIntroComplete] = useState(
+  sessionStorage.getItem("returnTo") === "projects"
+);
 
   const isReturning =
     sessionStorage.getItem("returnTo") === "projects";
