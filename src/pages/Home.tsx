@@ -156,7 +156,7 @@ if (returnTo === "projects") {
     block: "start",
   });
 
-  }, 50);
+  }, 0);
 
 }
 
