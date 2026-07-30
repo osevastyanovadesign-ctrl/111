@@ -9,6 +9,7 @@ import { useLocation } from "wouter";
 const EASE: [number, number, number, number] = [0.16, 1, 0.3, 1];
 
 export default function ProjectDetail() {
+  console.log("PROJECT DETAIL");
   const { slug } = useParams<{ slug: string }>();
   const [, setLocation] = useLocation();
 
