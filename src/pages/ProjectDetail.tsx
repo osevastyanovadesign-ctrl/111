@@ -210,6 +210,33 @@ export default function ProjectDetail() {
 
         </motion.div>
         </div>
+            {/* Gallery */}
+
+      <motion.div
+        className="max-w-7xl mx-auto px-6 md:px-24 mb-24"
+        initial={{ opacity: 0, y: 20 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 1, ease: EASE, delay: 0.55 }}
+      >
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
+
+          {project.photos.slice(1, 3).map((photo, index) => (
+            <div
+              key={index}
+              className="aspect-[4/5] overflow-hidden bg-muted"
+            >
+              <motion.img
+                src={photo}
+                alt={`${project.title} — фото ${index + 2}`}
+                className="w-full h-full object-cover"
+                whileHover={{ scale: 1.03 }}
+                transition={{ duration: 1.5, ease: EASE }}
+              />
+            </div>
+          ))}
+
+        </div>
+      </motion.div>
       {/* Materials */}
 
       <motion.div
