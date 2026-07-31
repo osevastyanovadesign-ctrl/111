@@ -225,14 +225,11 @@ export default function ProjectDetail() {
               key={index}
               className="aspect-[4/5] overflow-hidden bg-muted"
             >
-              <motion.img
-                src={photo}
-                loading="lazy"
-                alt={`${project.title} — фото ${index + 2}`}
-                className="w-full h-full object-cover"
-                whileHover={{ scale: 1.03 }}
-                transition={{ duration: 1.5, ease: EASE }}
-              />
+              <img
+            src={photo}
+            alt={`${project.title} — фото ${index + 2}`}
+            className="w-full h-full object-cover"
+          />
             </div>
           ))}
 
