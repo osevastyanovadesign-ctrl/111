@@ -227,6 +227,7 @@ export default function ProjectDetail() {
             >
               <motion.img
                 src={photo}
+                loading="lazy"
                 alt={`${project.title} — фото ${index + 2}`}
                 className="w-full h-full object-cover"
                 whileHover={{ scale: 1.03 }}
