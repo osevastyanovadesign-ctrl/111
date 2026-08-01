@@ -189,9 +189,9 @@ export default function ContactSection() {
     href="tel:+79038429153"
     className="
       font-mono
-      text-xs
+      text-sm
       tracking-[0.25em]
-      text-white/50
+      text-white/60
       hover:text-white
       transition-colors
     "
