@@ -178,6 +178,27 @@ export default function ContactSection() {
             justify-center
           "
         >
+          <div
+  className="
+    flex
+    justify-end
+    mb-4
+  "
+>
+  <a
+    href="tel:+79038429153"
+    className="
+      font-mono
+      text-xs
+      tracking-[0.25em]
+      text-white/50
+      hover:text-white
+      transition-colors
+    "
+  >
+    8-903-842-91-53
+  </a>
+</div>
           <h3
             className="
               font-serif
@@ -190,9 +211,9 @@ export default function ContactSection() {
               md:pr-0
             "
           >
-            Частная
+            Начнём
             <br />
-            консультация
+            диалог?
           </h3>
 
           <AnimatePresence mode="wait">
