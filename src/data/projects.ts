@@ -62,11 +62,11 @@ export const PROJECTS: Project[] = [
   {
     id: 2,
     slug: "villa-repino",
-    title: "Вилла в Репино",
-    year: "2022",
-    type: "Загородный дом",
+    title: "ЖК «Южные сады»",
+    year: "2026",
+    type: "Частная квартира",
     area: "420 м²",
-    location: "Репино, Ленобласть",
+    location: "Москва",
     hero: projectVilla,
     photos: [villa1, villa2, villa3],
     materialIds: [20, 5, 30], // Натуральный дуб · Сланец · Бельгийский лён
