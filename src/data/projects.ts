@@ -45,7 +45,7 @@ export const PROJECTS: Project[] = [
     id: 1,
     slug: "patriarshie",
     title: "Резиденция «Академпарк»",
-    year: "2023",
+    year: "2025",
     type: "Частный дом",
     area: "180 м²",
     location: "д.Тульчино",
