@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
   {
     id: 1,
     slug: "patriarshie",
-    title: "Дом в коттеджном поселке «Академпарк»",
+    title: "Резиденция «Академпарк»",
     year: "2023",
     type: "Частный дом",
     area: "180 м²",
