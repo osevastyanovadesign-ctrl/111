@@ -44,7 +44,7 @@ export const PROJECTS: Project[] = [
   {
     id: 1,
     slug: "patriarshie",
-    title: "Резиденция «Академпарк»",
+    title: "КП «Академпарк»",
     year: "2025",
     type: "Частный дом",
     area: "180 м²",
@@ -80,11 +80,11 @@ export const PROJECTS: Project[] = [
   {
     id: 3,
     slug: "loft-arma",
-    title: "Лофт на Арме",
-    year: "2024",
-    type: "Лофт-апартаменты",
-    area: "95 м²",
-    location: "Москва, Арма",
+    title: "Рязанское шоссе",
+    year: "2025",
+    type: "Квартира",
+    area: "100 м²",
+    location: "Новомосковск, Рязанское шоссе",
     hero: projectLoft,
     photos: [loft1, loft2, loft3],
     materialIds: [52, 42, 41], // Известковая штукатурка · Полированная сталь · Патинированная латунь
