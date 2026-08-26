@@ -98,7 +98,7 @@ export const PROJECTS: Project[] = [
   {
     id: 4,
     slug: "penthouse-city",
-    title: "Квартира в Ессетуках",
+    title: "Квартира в Ессентуках",
     year: "2026",
     type: "Квартира",
     area: "80 м²",
