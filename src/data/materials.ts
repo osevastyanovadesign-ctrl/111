@@ -47,20 +47,20 @@ export const MATERIALS: Material[] = [
   },
 
   {
-    id: 2,
-    name: "Травертин",
-    origin: "Тиволи, Италия",
-    category: "stone",
-    img: matTravertine,
-  },
+  id: 2,
+  name: "Декоративный кирпич",
+  origin: "White Hills, «Белый Сити Брик 375-00»",
+  category: "stone",
+  img: matTravertine,
+},
 
   {
-    id: 3,
-    name: "Чёрный оникс",
-    origin: "Иран",
-    category: "stone",
-    img: matOnyx,
-  },
+  id: 3,
+  name: "Инженерная доска",
+  origin: "Дуб, матовая поверхность, серо-коричневый оттенок",
+  category: "wood",
+  img: matOnyx,
+},
 
   {
     id: 4,
@@ -175,12 +175,12 @@ export const MATERIALS: Material[] = [
   },
 
   {
-    id: 51,
-    name: "Алебастр",
-    origin: "Тоскана, Италия",
-    category: "stone",
-    img: matAlabaster,
-  },
+  id: 51,
+  name: "Крупноформатный керамогранит",
+  origin: "Фактура натурального камня, серо-бежевый оттенок",
+  category: "stone",
+  img: matAlabaster,
+},
 
   {
     id: 52,
