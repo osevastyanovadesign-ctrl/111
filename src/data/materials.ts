@@ -63,12 +63,12 @@ export const MATERIALS: Material[] = [
 },
 
   {
-    id: 4,
-    name: "Абсолютный гранит",
-    origin: "Зимбабве",
-    category: "stone",
-    img: matGranite,
-  },
+  id: 4,
+  name: "Матовая интерьерная краска",
+  origin: "Сложный светло-мятный оттенок",
+  category: "stone",
+  img: matGranite,
+},
 
   {
     id: 5,
@@ -123,12 +123,12 @@ export const MATERIALS: Material[] = [
   },
 
   {
-    id: 31,
-    name: "Изумрудный бархат",
-    origin: "Ручное плетение",
-    category: "textile",
-    img: matVelvet,
-  },
+  id: 31,
+  name: "Керамогранит",
+  origin: "Фактура натурального камня",
+  category: "stone",
+  img: matVelvet,
+},
 
   // ───────── METAL ─────────
 
@@ -141,12 +141,12 @@ export const MATERIALS: Material[] = [
   },
 
   {
-    id: 41,
-    name: "Патинированная латунь",
-    origin: "Ручная работа",
-    category: "metal",
-    img: matBrass,
-  },
+  id: 41,
+  name: "Инженерная доска",
+  origin: "Под выбеленный дуб",
+  category: "wood",
+  img: matBrass,
+},
 
   {
     id: 42,
