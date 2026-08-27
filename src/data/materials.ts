@@ -149,12 +149,12 @@ export const MATERIALS: Material[] = [
 },
 
   {
-    id: 42,
-    name: "Полированная сталь",
-    origin: "Германия",
-    category: "metal",
-    img: matSteel,
-  },
+  id: 42,
+  name: "Матовая краска",
+  origin: "Слоновая кость",
+  category: "stone",
+  img: matSteel,
+},
 
   {
   id: 43,
@@ -183,18 +183,18 @@ export const MATERIALS: Material[] = [
 },
 
   {
-    id: 52,
-    name: "Известковая штукатурка",
-    origin: "Авторский состав",
-    category: "stone",
-    img: matPlaster,
-  },
+  id: 52,
+  name: "Керамическая плитка",
+  origin: "Белый мрамор · глянцевая поверхность",
+  category: "stone",
+  img: matPlaster,
+},
 
   {
-    id: 53,
-    name: "Ротанг",
-    origin: "Индонезия",
-    category: "wood",
-    img: matRattan,
-  },
+  id: 53,
+  name: "Шпонированная рейка",
+  origin: "Серо-коричневый оттенок",
+  category: "wood",
+  img: matRattan,
+},
 ];
