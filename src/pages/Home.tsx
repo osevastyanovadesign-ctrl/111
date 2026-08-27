@@ -856,13 +856,11 @@ transition={{
 <section
   className="
     py-20
-    md:py-32
+    md:py-20
     px-6
     md:px-24
     bg-[#171715]
     text-white
-    border-t
-    border-white/10
   "
 >
   <div className="max-w-7xl mx-auto">
@@ -914,20 +912,6 @@ transition={{
 
       {/* CLIENTS */}
       <div className="md:col-span-7">
-
-        <p
-          className="
-            font-mono
-            text-xs
-            uppercase
-            tracking-[0.2em]
-            text-white/40
-            mb-8
-          "
-        >
-          Среди проектов
-        </p>
-
         <div
           className="
             grid
