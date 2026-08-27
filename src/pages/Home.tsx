@@ -906,17 +906,17 @@ transition={{
 
 <section
   className="
-    py-20
-    md:py-48
-    px-6
-    md:px-24
+    py-20 
+    md:py-48 
+    px-6 
+    md:px-24 
     bg-[#171715]
     text-white
   "
 >
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 items-center">
 
-    {/* Left — Behance / Commercial Projects */}
+    {/* Left — Commercial / Corporate Projects */}
 
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -930,43 +930,54 @@ transition={{
         href="https://www.behance.net/cbacaf41"
         target="_blank"
         rel="noopener noreferrer"
-        className="
-          font-mono
-          text-xs
-          uppercase
-          tracking-[0.3em]
-          opacity-50
-          mb-10
-          -translate-y-4
-          inline-block
-          hover:opacity-100
-          transition-opacity
-        "
+        className="font-mono text-xs uppercase tracking-[0.3em] opacity-50 mb-10 -translate-y-4 inline-block hover:opacity-100 transition-opacity"
       >
         Behance
       </a>
 
       <h2
-  className="
-    font-serif
-    text-[2rem]
-    md:text-6xl
-    leading-[0.95]
-    max-w-[85vw]
-    -translate-x-3
-    md:translate-x-0
-  "
->
-  Коммерческие и корпоративные
-  <br />
-  <ClientCycleWord />
-</h2>
+        className="
+          font-serif
+          text-[2rem]
+          md:text-6xl
+          leading-[0.95]
+          max-w-[85vw]
+          -translate-x-3
+          md:translate-x-0
+        "
+      >
+        Коммерческие и корпоративные
+        <br />
+        <ClientCycleWord />
+      </h2>
 
     </motion.div>
 
-    {/* Right — Image + Changing Project Names */}
 
-    <ClientCycle />
+    {/* Right — Image */}
+
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.2 }}
+      className="md:col-span-6 -translate-y-6 md:translate-y-0"
+    >
+      <div className="aspect-[4/5] overflow-hidden relative">
+        <motion.img
+          src={philosophyImage}
+          alt="Commercial and corporate projects"
+          className="w-full h-full object-cover"
+          initial={{ scale: 1.04 }}
+          whileInView={{ scale: 1.1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 18,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        />
+      </div>
+    </motion.div>
 
   </div>
 </section>
