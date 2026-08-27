@@ -559,7 +559,16 @@ export default function ContactSection() {
       >
         <span>© {new Date().getFullYear()} Vladimir Sergeev</span>
 
-        <span>Novomoskovsk, Russia</span>
+<a
+  href="https://www.behance.net/cbacaf41"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="hover:text-white transition-colors"
+>
+  Behance ↗
+</a>
+
+<span>Novomoskovsk, Russia</span>
       </div>
     </section>
   );
