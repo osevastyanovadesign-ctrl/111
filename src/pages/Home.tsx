@@ -938,18 +938,9 @@ transition={{
     text-white
   "
 >
-  <div className="
-    max-w-7xl
-    mx-auto
-    grid
-    grid-cols-1
-    md:grid-cols-12
-    gap-16
-    md:gap-24
-    items-center
-  ">
+  <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 items-center">
 
-    {/* Left — Title */}
+    {/* Left — Behance / Projects */}
 
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -959,6 +950,10 @@ transition={{
       className="md:col-span-6"
     >
 
+      <p className="font-mono text-xs uppercase tracking-[0.3em] opacity-50 mb-10 -translate-y-4">
+        Behance
+      </p>
+
       <h2
         className="
           font-serif
@@ -966,6 +961,8 @@ transition={{
           md:text-7xl
           leading-[0.95]
           max-w-[85vw]
+          -translate-x-3
+          md:translate-x-0
         "
       >
         Коммерческие
@@ -978,7 +975,7 @@ transition={{
     </motion.div>
 
 
-    {/* Right — Changing project */}
+    {/* Right — Changing project names */}
 
     <ClientCycle />
 
