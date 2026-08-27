@@ -102,8 +102,7 @@ const CLIENTS = [
   "Вектор",
 ];
 
-
-function ClientCycle() {
+function ClientCycleWord() {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
@@ -115,67 +114,32 @@ function ClientCycle() {
   }, []);
 
   return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1.2 }}
-      className="md:col-span-6 -translate-y-6 md:translate-y-0"
-    >
-      <div className="aspect-[4/5] overflow-hidden relative">
-        <motion.img
-          src={philosophyImage}
-          alt="Commercial and corporate projects"
-          className="w-full h-full object-cover"
-          initial={{ scale: 1.04 }}
-          whileInView={{ scale: 1.1 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 18,
-            ease: [0.16, 1, 0.3, 1],
+    <span className="relative inline-block">
+      <AnimatePresence mode="wait">
+        <motion.span
+          key={index}
+          className="inline-block font-serif italic"
+          initial={{
+            opacity: 0,
+            y: 18
           }}
-        />
-
-        <div className="absolute inset-0 flex items-center">
-
-          <AnimatePresence mode="wait">
-
-            <motion.p
-              key={index}
-              initial={{
-                opacity: 0,
-                y: 18
-              }}
-              animate={{
-                opacity: 1,
-                y: 0
-              }}
-              exit={{
-                opacity: 0,
-                y: -18
-              }}
-              transition={{
-                duration: 0.65,
-                ease: [0.16, 1, 0.3, 1]
-              }}
-              className="
-                font-serif
-                italic
-                text-[2.2rem]
-                md:text-7xl
-                leading-[0.95]
-                text-white
-              "
-            >
-              {CLIENTS[index]}
-            </motion.p>
-
-          </AnimatePresence>
-
-        </div>
-
-      </div>
-    </motion.div>
+          animate={{
+            opacity: 1,
+            y: 0
+          }}
+          exit={{
+            opacity: 0,
+            y: -18
+          }}
+          transition={{
+            duration: 0.65,
+            ease: [0.16, 1, 0.3, 1]
+          }}
+        >
+          {CLIENTS[index]}
+        </motion.span>
+      </AnimatePresence>
+    </span>
   );
 }
 
@@ -983,22 +947,20 @@ transition={{
       </a>
 
       <h2
-        className="
-          font-serif
-          text-[2.2rem]
-          md:text-7xl
-          leading-[0.95]
-          max-w-[85vw]
-          -translate-x-3
-          md:translate-x-0
-        "
-      >
-        Коммерческие
-        <br />
-        и корпоративные
-        <br />
-        проекты
-      </h2>
+  className="
+    font-serif
+    text-[2rem]
+    md:text-6xl
+    leading-[0.95]
+    max-w-[85vw]
+    -translate-x-3
+    md:translate-x-0
+  "
+>
+  Коммерческие и корпоративные
+  <br />
+  <ClientCycleWord />
+</h2>
 
     </motion.div>
 
