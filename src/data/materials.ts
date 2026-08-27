@@ -79,12 +79,12 @@ export const MATERIALS: Material[] = [
   },
 
   {
-    id: 6,
-    name: "Дикий камень",
-    origin: "Крым",
-    category: "stone",
-    img: matRawstone,
-  },
+  id: 6,
+  name: "Декоративная штукатурка",
+  origin: "«Мокрый шёлк», оттенок «Шоколад» · Decorazza",
+  category: "stone",
+  img: matRawstone,
+},
 
   // ───────── WOOD ─────────
 
@@ -97,20 +97,20 @@ export const MATERIALS: Material[] = [
   },
 
   {
-    id: 21,
-    name: "Венге",
-    origin: "Камерун",
-    category: "wood",
-    img: matWenge,
-  },
+  id: 21,
+  name: "Керамогранит",
+  origin: "SG645720R Zircon · графитовый · 60 × 60 см",
+  category: "stone",
+  img: matWenge,
+},
 
   {
-    id: 22,
-    name: "Эвкалипт копчёный",
-    origin: "Португалия",
-    category: "wood",
-    img: matEucalyptus,
-  },
+  id: 22,
+  name: "Ламинат",
+  origin: "IMPRESSIVE ULTRA · IMU1848 · натуральный дуб",
+  category: "wood",
+  img: matEucalyptus,
+},
 
   // ───────── TEXTILE ─────────
 
