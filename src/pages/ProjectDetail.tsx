@@ -17,7 +17,22 @@ export default function ProjectDetail() {
 
   useEffect(() => {
   window.scrollTo(0, 0);
-  }, [slug]);
+
+  if (project) {
+    document.title = `${project.title} — Владимир Сергеев`;
+
+    const description = document.querySelector(
+      'meta[name="description"]'
+    );
+
+    if (description) {
+      description.setAttribute(
+        "content",
+        `${project.title} — авторский дизайн интерьера. ${project.type}, ${project.area}, ${project.location}.`
+      );
+    }
+  }
+}, [slug, project]);
 
   if (!project) {
     return (
