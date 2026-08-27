@@ -133,12 +133,12 @@ export const MATERIALS: Material[] = [
   // ───────── METAL ─────────
 
   {
-    id: 40,
-    name: "Состаренная бронза",
-    origin: "Ручная работа",
-    category: "metal",
-    img: matBronze,
-  },
+  id: 40,
+  name: "Керамогранит",
+  origin: "Белый мрамор · матовая поверхность",
+  category: "stone",
+  img: matBronze,
+},
 
   {
   id: 41,
@@ -157,22 +157,22 @@ export const MATERIALS: Material[] = [
   },
 
   {
-    id: 43,
-    name: "Патинированная медь",
-    origin: "Ручная работа",
-    category: "metal",
-    img: matCopper,
-  },
+  id: 43,
+  name: "Виниловые обои",
+  origin: "Пастельный оттенок",
+  category: "textile",
+  img: matCopper,
+},
 
   // ───────── OTHER ─────────
 
   {
-    id: 50,
-    name: "Терраццо",
-    origin: "Венеция, Италия",
-    category: "stone",
-    img: matTerrazzo,
-  },
+  id: 50,
+  name: "Керамическая плитка",
+  origin: "Italon · Пелларис Элегант Сильвер · макси-формат",
+  category: "stone",
+  img: matTerrazzo,
+},
 
   {
   id: 51,
