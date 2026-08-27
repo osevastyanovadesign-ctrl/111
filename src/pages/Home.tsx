@@ -91,7 +91,81 @@ function HeroCycleWord() {
   );
 }
 
+const CLIENTS = [
+  "ПромТехноПарк",
+  "Новомосковскгаздеталь",
+  "Procter & Gamble",
+  "Медицинский центр «Здоровье»",
+  "Донская обувь",
+  "ЭСТМ",
+  "Мечта",
+  "Вектор",
+];
 
+
+function ClientCycle() {
+
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+
+    const id = setInterval(() => {
+      setIndex(i => (i + 1) % CLIENTS.length);
+    }, 2600);
+
+    return () => clearInterval(id);
+
+  }, []);
+
+  return (
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.2 }}
+      className="md:col-span-6 -translate-y-6 md:translate-y-0"
+    >
+
+      <div className="aspect-[4/5] overflow-hidden relative flex items-center">
+
+        <AnimatePresence mode="wait">
+
+          <motion.p
+            key={index}
+            initial={{
+              opacity: 0,
+              y: 18
+            }}
+            animate={{
+              opacity: 1,
+              y: 0
+            }}
+            exit={{
+              opacity: 0,
+              y: -18
+            }}
+            transition={{
+              duration: 0.65,
+              ease: [0.16, 1, 0.3, 1]
+            }}
+            className="
+              font-serif
+              italic
+              text-[2.2rem]
+              md:text-7xl
+              leading-[0.95]
+            "
+          >
+            {CLIENTS[index]}
+          </motion.p>
+
+        </AnimatePresence>
+
+      </div>
+
+    </motion.div>
+  );
+}
 
 export default function Home() {
   console.log("HOME MOUNT");
@@ -853,161 +927,60 @@ transition={{
       </section>
 
       {/* 05. Коммерческие и корпоративные проекты */}
+
 <section
   className="
     py-20
-    md:py-20
+    md:py-48
     px-6
     md:px-24
     bg-[#171715]
     text-white
   "
 >
-  <div className="max-w-7xl mx-auto">
+  <div className="
+    max-w-7xl
+    mx-auto
+    grid
+    grid-cols-1
+    md:grid-cols-12
+    gap-16
+    md:gap-24
+    items-center
+  ">
+
+    {/* Left — Title */}
 
     <motion.div
-      initial={{ opacity: 0, y: 20 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
-      transition={{
-        duration: 1,
-        ease: EASE,
-      }}
-      className="grid grid-cols-1 md:grid-cols-12 gap-12 md:gap-24"
+      transition={TRANSITION}
+      className="md:col-span-6"
     >
 
-      {/* TITLE */}
-      <div className="md:col-span-5">
-
-        <p
-          className="
-            font-mono
-            text-xs
-            uppercase
-            tracking-[0.3em]
-            text-white/40
-            mb-8
-          "
-        >
-          Опыт
-        </p>
-
-        <h2
-          className="
-            font-serif
-            italic
-            text-4xl
-            md:text-6xl
-            leading-[0.95]
-          "
-        >
-          Коммерческие
-          <br />
-          и корпоративные
-          <br />
-          проекты
-        </h2>
-
-      </div>
-
-      {/* CLIENTS */}
-      <div className="md:col-span-7">
-        <div
-          className="
-            grid
-            grid-cols-1
-            sm:grid-cols-2
-            gap-x-12
-            gap-y-5
-          "
-        >
-
-          {[
-            "ПромТехноПарк",
-            "Новомосковскгаздеталь",
-            "Procter & Gamble — Новомосковск",
-            "Медицинский центр «Здоровье»",
-            "Донская обувь",
-            "ЭСТМ",
-            "«Мечта»",
-            "«Вектор»",
-          ].map((client, index) => (
-
-            <motion.div
-              key={client}
-              initial={{ opacity: 0, y: 10 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{
-                duration: 0.7,
-                delay: index * 0.06,
-                ease: EASE,
-              }}
-              className={`
-                border-b
-                border-white/10
-                pb-4
-                font-mono
-                text-sm
-                md:text-base
-                ${
-                  client === "Procter & Gamble — Новомосковск"
-                    ? "text-white"
-                    : "text-white/70"
-                }
-              `}
-            >
-              {client}
-            </motion.div>
-
-          ))}
-
-        </div>
-
-        {/* BEHANCE */}
-
-        <motion.a
-          href="https://www.behance.net/cbacaf41"
-          target="_blank"
-          rel="noopener noreferrer"
-          initial={{ opacity: 0 }}
-          whileInView={{ opacity: 1 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.8,
-            delay: 0.45,
-            ease: EASE,
-          }}
-          className="
-  group
-  inline-flex
-  items-center
-  gap-3
-  mt-10
-  font-mono
-  text-xs
-  uppercase
-  tracking-[0.2em]
-  text-white/50
-  hover:text-white
-  transition-colors
-"
-        >
-          Портфолио на Behance
-          <span
-            className="
-              transition-transform
-              duration-500
-              group-hover:translate-x-1
-            "
-          >
-            →
-          </span>
-        </motion.a>
-
-      </div>
+      <h2
+        className="
+          font-serif
+          text-[2.2rem]
+          md:text-7xl
+          leading-[0.95]
+          max-w-[85vw]
+        "
+      >
+        Коммерческие
+        <br />
+        и корпоративные
+        <br />
+        проекты
+      </h2>
 
     </motion.div>
+
+
+    {/* Right — Changing project */}
+
+    <ClientCycle />
 
   </div>
 </section>
