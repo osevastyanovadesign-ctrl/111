@@ -923,7 +923,7 @@ transition={{
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={TRANSITION}
-      className="md:col-span-6"
+      className="md:col-span-6 -translate-y-6 md:translate-y-0"
     >
 
       <a
