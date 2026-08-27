@@ -906,10 +906,12 @@ transition={{
 
 <section
   className="
-    py-20 
-    md:py-48 
-    px-6 
-    md:px-24 
+    pt-32
+    md:pt-64
+    pb-20
+    md:pb-48
+    px-6
+    md:px-24
     bg-[#171715]
     text-white
   "
@@ -923,7 +925,7 @@ transition={{
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true }}
       transition={TRANSITION}
-      className="md:col-span-6 -translate-y-6 md:translate-y-0"
+      className="md:col-span-6 -translate-y-12 md:-translate-y-8"
     >
 
       <a
@@ -947,8 +949,10 @@ transition={{
         "
       >
         Коммерческие и корпоративные
-        <br />
-        <ClientCycleWord />
+<br />
+<span className="inline-block mt-5 md:mt-8">
+  <ClientCycleWord />
+</span>
       </h2>
 
     </motion.div>
