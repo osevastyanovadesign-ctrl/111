@@ -104,17 +104,14 @@ const CLIENTS = [
 
 
 function ClientCycle() {
-
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
-
     const id = setInterval(() => {
       setIndex(i => (i + 1) % CLIENTS.length);
     }, 2600);
 
     return () => clearInterval(id);
-
   }, []);
 
   return (
@@ -125,44 +122,59 @@ function ClientCycle() {
       transition={{ duration: 1.2 }}
       className="md:col-span-6 -translate-y-6 md:translate-y-0"
     >
+      <div className="aspect-[4/5] overflow-hidden relative">
+        <motion.img
+          src={philosophyImage}
+          alt="Commercial and corporate projects"
+          className="w-full h-full object-cover"
+          initial={{ scale: 1.04 }}
+          whileInView={{ scale: 1.1 }}
+          viewport={{ once: true }}
+          transition={{
+            duration: 18,
+            ease: [0.16, 1, 0.3, 1],
+          }}
+        />
 
-      <div className="aspect-[4/5] overflow-hidden relative flex items-center">
+        <div className="absolute inset-0 flex items-center">
 
-        <AnimatePresence mode="wait">
+          <AnimatePresence mode="wait">
 
-          <motion.p
-            key={index}
-            initial={{
-              opacity: 0,
-              y: 18
-            }}
-            animate={{
-              opacity: 1,
-              y: 0
-            }}
-            exit={{
-              opacity: 0,
-              y: -18
-            }}
-            transition={{
-              duration: 0.65,
-              ease: [0.16, 1, 0.3, 1]
-            }}
-            className="
-              font-serif
-              italic
-              text-[2.2rem]
-              md:text-7xl
-              leading-[0.95]
-            "
-          >
-            {CLIENTS[index]}
-          </motion.p>
+            <motion.p
+              key={index}
+              initial={{
+                opacity: 0,
+                y: 18
+              }}
+              animate={{
+                opacity: 1,
+                y: 0
+              }}
+              exit={{
+                opacity: 0,
+                y: -18
+              }}
+              transition={{
+                duration: 0.65,
+                ease: [0.16, 1, 0.3, 1]
+              }}
+              className="
+                font-serif
+                italic
+                text-[2.2rem]
+                md:text-7xl
+                leading-[0.95]
+                text-white
+              "
+            >
+              {CLIENTS[index]}
+            </motion.p>
 
-        </AnimatePresence>
+          </AnimatePresence>
+
+        </div>
 
       </div>
-
     </motion.div>
   );
 }
@@ -940,7 +952,7 @@ transition={{
 >
   <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-16 md:gap-24 items-center">
 
-    {/* Left — Behance / Projects */}
+    {/* Left — Behance / Commercial Projects */}
 
     <motion.div
       initial={{ opacity: 0, y: 40 }}
@@ -950,9 +962,25 @@ transition={{
       className="md:col-span-6"
     >
 
-      <p className="font-mono text-xs uppercase tracking-[0.3em] opacity-50 mb-10 -translate-y-4">
+      <a
+        href="https://www.behance.net/cbacaf41"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          font-mono
+          text-xs
+          uppercase
+          tracking-[0.3em]
+          opacity-50
+          mb-10
+          -translate-y-4
+          inline-block
+          hover:opacity-100
+          transition-opacity
+        "
+      >
         Behance
-      </p>
+      </a>
 
       <h2
         className="
@@ -974,8 +1002,7 @@ transition={{
 
     </motion.div>
 
-
-    {/* Right — Changing project names */}
+    {/* Right — Image + Changing Project Names */}
 
     <ClientCycle />
 
