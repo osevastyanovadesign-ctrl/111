@@ -32,7 +32,7 @@ export default function ProjectDetail() {
       );
     }
   }
-}, [slug, project]);
+}, [slug]);
 
   if (!project) {
     return (
