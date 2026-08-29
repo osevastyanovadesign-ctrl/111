@@ -165,6 +165,46 @@ function ClientCycleWord() {
     </span>
   );
 }
+function CommercialProjectImage() {
+  const [index, setIndex] = useState(0);
+
+  useEffect(() => {
+    const id = setInterval(() => {
+      setIndex(i => (i + 1) % COMMERCIAL_IMAGES.length);
+    }, 7800);
+
+    return () => clearInterval(id);
+  }, []);
+
+  return (
+    <div className="aspect-[4/5] overflow-hidden relative">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={index}
+          src={COMMERCIAL_IMAGES[index]}
+          alt="Commercial and corporate project"
+          initial={{
+            opacity: 0,
+            scale: 1.025,
+          }}
+          animate={{
+            opacity: 1,
+            scale: 1,
+          }}
+          exit={{
+            opacity: 0,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.4,
+            ease: EASE,
+          }}
+          className="absolute inset-0 w-full h-full object-cover"
+        />
+      </AnimatePresence>
+    </div>
+  );
+}
 
 export default function Home() {
   console.log("HOME MOUNT");
@@ -984,30 +1024,18 @@ transition={{
     {/* Right — Image */}
 
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1.2 }}
-      className="md:col-span-6 -translate-y-6 md:translate-y-0"
-    >
-      <div className="aspect-[4/5] overflow-hidden relative">
-        <motion.img
-          src={philosophyImage}
-          alt="Commercial and corporate projects"
-          className="w-full h-full object-cover"
-          initial={{ scale: 1.04 }}
-          whileInView={{ scale: 1.1 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 18,
-            ease: [0.16, 1, 0.3, 1],
-          }}
-        />
-      </div>
-    </motion.div>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1.2 }}
+  className="md:col-span-6 -translate-y-6 md:translate-y-0"
+>
+  <CommercialProjectImage />
+</motion.div>
 
-  </div>
+</div>
 </section>
+
 
       {/* 05. Testimonials ────────────────────────────── */}
       <TestimonialsSection />
