@@ -171,25 +171,30 @@ function CommercialProjectImage() {
   useEffect(() => {
     const id = setInterval(() => {
       setIndex(i => (i + 1) % COMMERCIAL_IMAGES.length);
-    }, 7800);
+    }, 4800);
 
     return () => clearInterval(id);
   }, []);
 
   return (
     <div className="aspect-[4/5] overflow-hidden relative">
-      <motion.img
-        key={index}
-        src={COMMERCIAL_IMAGES[index]}
-        alt="Commercial and corporate project"
-        className="absolute inset-0 w-full h-full object-cover"
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          duration: 1.2,
-          ease: EASE,
-        }}
-      />
+      <AnimatePresence mode="sync">
+        <motion.img
+          key={index}
+          src={COMMERCIAL_IMAGES[index]}
+          alt="Commercial and corporate project"
+          className="absolute inset-0 w-full h-full object-cover"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          exit={{ opacity: 0 }}
+          transition={{
+            opacity: {
+              duration: 1.5,
+              ease: [0.4, 0, 0.2, 1],
+            },
+          }}
+        />
+      </AnimatePresence>
     </div>
   );
 }
