@@ -976,7 +976,7 @@ transition={{
                           <p
   className="
     font-mono
-    text-[8px]
+    text-[9px]
     md:text-xs
     uppercase
     tracking-[0.08em]
