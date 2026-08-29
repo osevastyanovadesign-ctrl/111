@@ -13,6 +13,17 @@ import TestimonialsSection from "@/components/TestimonialsSection";
 import heroImage from "@assets/generated_images/hero-interior.jpg";
 import philosophyImage from "@assets/generated_images/moscow-3.jpg";
 
+import commercial01 from "@assets/generated_images/commercial-project-01.webp";
+import commercial02 from "@assets/generated_images/commercial-project-02.webp";
+import commercial03 from "@assets/generated_images/commercial-project-03.webp";
+import commercial04 from "@assets/generated_images/commercial-project-04.webp";
+import commercial05 from "@assets/generated_images/commercial-project-05.webp";
+import commercial06 from "@assets/generated_images/commercial-project-06.webp";
+import commercial07 from "@assets/generated_images/commercial-project-07.webp";
+import commercial08 from "@assets/generated_images/commercial-project-08.webp";
+import commercial09 from "@assets/generated_images/commercial-project-09.webp";
+import commercial10 from "@assets/generated_images/commercial-project-10.webp";
+
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
 
@@ -100,6 +111,18 @@ const CLIENTS = [
   "ЭСТМ",
   "Центр «Мечта»",
   "ЦМ «Вектор»",
+];
+const COMMERCIAL_IMAGES = [
+  commercial01,
+  commercial02,
+  commercial03,
+  commercial04,
+  commercial05,
+  commercial06,
+  commercial07,
+  commercial08,
+  commercial09,
+  commercial10,
 ];
 
 function ClientCycleWord() {
