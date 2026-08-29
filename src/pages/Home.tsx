@@ -166,42 +166,13 @@ function ClientCycleWord() {
   );
 }
 function CommercialProjectImage() {
-  const [index, setIndex] = useState(0);
-
-  useEffect(() => {
-    const id = setInterval(() => {
-      setIndex(i => (i + 1) % COMMERCIAL_IMAGES.length);
-    }, 7800);
-
-    return () => clearInterval(id);
-  }, []);
-
   return (
     <div className="aspect-[4/5] overflow-hidden relative">
-      <AnimatePresence mode="wait">
-        <motion.img
-          key={index}
-          src={COMMERCIAL_IMAGES[index]}
-          alt="Commercial and corporate project"
-          initial={{
-            opacity: 0,
-            scale: 1.025,
-          }}
-          animate={{
-            opacity: 1,
-            scale: 1,
-          }}
-          exit={{
-            opacity: 0,
-            scale: 1,
-          }}
-          transition={{
-            duration: 1.4,
-            ease: EASE,
-          }}
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </AnimatePresence>
+      <img
+        src={commercial01}
+        alt="Commercial and corporate project"
+        className="w-full h-full object-cover"
+      />
     </div>
   );
 }
