@@ -974,19 +974,19 @@ transition={{
                         <div>
 
                           <p
-                          className="
-                          font-mono
-                          text-[10px]
-                          md:text-xs
-                          uppercase
-                          tracking-[0.12em]
-                          md:tracking-[0.18em]
-                          text-white
-                          leading-relaxed
-                           "
-                           >
-                          {material.name}
-                          </p>
+  className="
+    font-mono
+    text-[8px]
+    md:text-xs
+    uppercase
+    tracking-[0.08em]
+    md:tracking-[0.18em]
+    text-white
+    leading-relaxed
+  "
+>
+  {material.name}
+</p>
 
                           <p
                             className="
