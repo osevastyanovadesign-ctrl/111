@@ -1065,7 +1065,7 @@ transition={{
           md:translate-x-0
         "
       >
-        Коммерческие и корпоративные
+        Коммерческие и корпоративные проекты
 <br />
 <span className="inline-block mt-5 md:mt-8">
   <ClientCycleWord />
