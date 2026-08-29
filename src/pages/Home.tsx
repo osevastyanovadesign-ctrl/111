@@ -971,35 +971,36 @@ transition={{
 
                         {/* TEXT */}
 
-                        <div className="min-h-[4rem]">
+                        <div>
 
-  <p
-    className="
-      font-mono
-      text-xs
-      uppercase
-      tracking-[0.18em]
-      text-white
-      leading-relaxed
-    "
-  >
-    {material.name}
-  </p>
+                          <p
+                          className="
+                          font-mono
+                          text-[10px]
+                          md:text-xs
+                          uppercase
+                          tracking-[0.12em]
+                          md:tracking-[0.18em]
+                          text-white
+                          leading-relaxed
+                           "
+                           >
+                          {material.name}
+                          </p>
 
-  <p
-    className="
-      font-mono
-      text-[10px]
-      tracking-[0.15em]
-      text-white/70
-      mt-1
-      leading-relaxed
-    "
-  >
-    {material.origin}
-  </p>
+                          <p
+                            className="
+                              font-mono
+                              text-[10px]
+                              tracking-[0.15em]
+                              text-white/70
+                              mt-1
+                            "
+                          >
+                            {material.origin}
+                          </p>
 
-</div>
+                          </div>
 
 
                           </motion.div>
