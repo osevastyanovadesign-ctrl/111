@@ -199,19 +199,19 @@ function CommercialProjectImage() {
       {/* SOFT EDGES */}
 
       {/* TOP */}
-      <div
-        className="
-          absolute
-          top-0
-          left-0
-          right-0
-          h-10
-          pointer-events-none
-          bg-gradient-to-b
-          from-[#171715]/35
-          to-transparent
-        "
-      />
+<div
+  className="
+    absolute
+    top-0
+    left-0
+    right-0
+    h-16
+    pointer-events-none
+    bg-gradient-to-b
+    from-[#171715]
+    to-transparent
+  "
+/>
 
       {/* LEFT */}
       <div
