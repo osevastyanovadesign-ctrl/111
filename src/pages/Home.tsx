@@ -178,6 +178,8 @@ function CommercialProjectImage() {
 
   return (
     <div className="aspect-[4/5] overflow-hidden relative">
+
+      {/* PHOTO */}
       <AnimatePresence mode="sync">
         <motion.img
           key={index}
@@ -188,13 +190,72 @@ function CommercialProjectImage() {
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}
           transition={{
-            opacity: {
-              duration: 1.5,
-              ease: [0.4, 0, 0.2, 1],
-            },
+            duration: 1.5,
+            ease: [0.4, 0, 0.2, 1],
           }}
         />
       </AnimatePresence>
+
+      {/* SOFT EDGES */}
+
+      {/* TOP */}
+      <div
+        className="
+          absolute
+          top-0
+          left-0
+          right-0
+          h-10
+          pointer-events-none
+          bg-gradient-to-b
+          from-[#171715]/35
+          to-transparent
+        "
+      />
+
+      {/* LEFT */}
+      <div
+        className="
+          absolute
+          inset-y-0
+          left-0
+          w-16
+          pointer-events-none
+          bg-gradient-to-r
+          from-[#171715]
+          to-transparent
+        "
+      />
+
+      {/* RIGHT */}
+      <div
+        className="
+          absolute
+          inset-y-0
+          right-0
+          w-16
+          pointer-events-none
+          bg-gradient-to-l
+          from-[#171715]
+          to-transparent
+        "
+      />
+
+      {/* BOTTOM */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          right-0
+          h-28
+          pointer-events-none
+          bg-gradient-to-t
+          from-[#171715]
+          to-transparent
+        "
+      />
+
     </div>
   );
 }
