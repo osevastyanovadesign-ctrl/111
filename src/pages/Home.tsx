@@ -268,42 +268,45 @@ function AboutImage() {
     <div className="aspect-[4/5] overflow-hidden relative">
 
       {/* BLACK & WHITE */}
-      <img
-        src={aboutImage}
-        alt="Vladimir Sergeev — interior design"
-        className="
-          absolute
-          inset-0
-          w-full
-          h-full
-          object-cover
-          grayscale
-        "
-      />
+<img
+  src={aboutImage}
+  alt="Vladimir Sergeev — interior design"
+  className="
+    absolute
+    inset-0
+    w-full
+    h-full
+    object-cover
+    grayscale
+  "
+/>
 
-      {/* COLOR */}
-      <div
-        className="
-          absolute
-          inset-0
-          overflow-hidden
-          pointer-events-none
-        "
-        style={{
-          clipPath:
-            "polygon(58% 0, 100% 0, 100% 100%, 42% 100%)",
-        }}
-      >
-        <img
-          src={aboutImage}
-          alt=""
-          className="
-            w-full
-            h-full
-            object-cover
-          "
-        />
-      </div>
+{/* COLOR */}
+<motion.div
+  className="
+    absolute
+    inset-0
+    overflow-hidden
+    pointer-events-none
+  "
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{
+    duration: 3.5,
+    ease: [0.16, 1, 0.3, 1],
+  }}
+>
+  <img
+    src={aboutImage}
+    alt=""
+    className="
+      w-full
+      h-full
+      object-cover
+    "
+  />
+</motion.div>
 
       {/* SOFT TRANSITION */}
       <div
