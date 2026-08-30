@@ -294,7 +294,7 @@ function AboutImage() {
   viewport={{ once: true, amount: 0.4 }}
   transition={{
   duration: 5,
-  delay: 0.8,
+  delay: 0.3,
   ease: [0.16, 1, 0.3, 1],
 }}
 >
