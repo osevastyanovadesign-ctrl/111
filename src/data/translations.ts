@@ -11,10 +11,11 @@ export const translations = {
     hero: {
       category: "Interior Design",
       architecture: "Architecture",
+      alt: "Минималистичный интерьер",
     },
 
     philosophy: {
-      label: "Philosophy",
+      label: "Философия",
       title: "Пространство как",
       words: [
         "тишина",
@@ -24,6 +25,7 @@ export const translations = {
       ],
       author: "Vladimir Sergeev",
       description: "Interior Design · Architecture",
+      imageAlt: "Атмосфера интерьера",
     },
 
     projects: {
@@ -34,6 +36,7 @@ export const translations = {
 
     commercial: {
       title: "Коммерческие и корпоративные проекты",
+      imageAlt: "Коммерческий и корпоративный проект",
     },
 
     about: {
@@ -45,6 +48,8 @@ export const translations = {
         "архитектура и предметная среда.",
       ],
       behance: "Подробно о проектах и профессиональном опыте",
+      behanceArrow: "Behance →",
+      imageAlt: "Владимир Сергеев — дизайн интерьера",
     },
 
     expertise: {
@@ -86,6 +91,7 @@ export const translations = {
     hero: {
       category: "Interior Design",
       architecture: "Architecture",
+      alt: "Minimalist interior",
     },
 
     philosophy: {
@@ -99,6 +105,7 @@ export const translations = {
       ],
       author: "Vladimir Sergeev",
       description: "Interior Design · Architecture",
+      imageAlt: "Interior atmosphere",
     },
 
     projects: {
@@ -109,6 +116,7 @@ export const translations = {
 
     commercial: {
       title: "Commercial & Corporate Projects",
+      imageAlt: "Commercial and corporate project",
     },
 
     about: {
@@ -120,6 +128,8 @@ export const translations = {
         "architecture and objects.",
       ],
       behance: "Projects and professional experience",
+      behanceArrow: "Behance →",
+      imageAlt: "Vladimir Sergeev — interior design",
     },
 
     expertise: {
