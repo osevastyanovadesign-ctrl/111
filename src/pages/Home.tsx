@@ -42,32 +42,23 @@ const TRANSITION = {
 
 
 // The last word cycles; "Пространство как" is fixed
-const CYCLE_WORDS = {
-  RU: [
-    "тишина",
-    "воздух",
-    "свет",
-    "дыхание",
-  ],
-  EN: [
-    "silence",
-    "air",
-    "light",
-    "breath",
-  ],
-};
 
-
-function HeroCycleWord({ language }: { language: Language }) {
+function HeroCycleWord({
+  words,
+  language,
+}: {
+  words: readonly string[];
+  language: Language;
+}) {
   const [index, setIndex] = useState(0);
 
   useEffect(() => {
     const id = setInterval(() => {
-      setIndex(i => (i + 1) % CYCLE_WORDS[language].length);
+      setIndex(i => (i + 1) % words.length);
     }, 2600);
 
     return () => clearInterval(id);
-  }, [language]);
+  }, [words, language]);
 
   return (
     <span className="relative inline-block">
@@ -92,7 +83,7 @@ function HeroCycleWord({ language }: { language: Language }) {
             ease: [0.16, 1, 0.3, 1]
           }}
         >
-          {CYCLE_WORDS[language][index]}
+          {words[index]}
         </motion.span>
       </AnimatePresence>
     </span>
