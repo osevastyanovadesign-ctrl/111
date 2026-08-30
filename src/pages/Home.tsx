@@ -1309,8 +1309,8 @@ transition={{
     <span
       className="
         font-mono
-        text-[0.65rem]
-        md:text-xs
+        text-sm
+        md:text-base
         uppercase
         tracking-[0.18em]
         text-white/60
