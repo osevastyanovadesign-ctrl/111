@@ -23,16 +23,34 @@ import retreat3   from "@assets/generated_images/retreat-3.jpg";
 export interface Project {
   id: number;
   slug: string;
-  title: string;
+  title: {
+    RU: string;
+    EN: string;
+  };
   year: string;
-  type: string;
+  type: {
+    RU: string;
+    EN: string;
+  };
   area: string;
-  location: string;
+  location: {
+    RU: string;
+    EN: string;
+  };
   hero: string;
   photos: string[];
-  task: string;
-  solution: string;
-  result: string;
+  task: {
+    RU: string;
+    EN: string;
+  };
+  solution: {
+    RU: string;
+    EN: string;
+  };
+  result: {
+    RU: string;
+    EN: string;
+  };
   /** IDs from MATERIALS array — 3 textures that define this project */
   materialIds: [number, number, number];
   gridWidth: string;
