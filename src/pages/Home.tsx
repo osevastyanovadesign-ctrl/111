@@ -1369,14 +1369,19 @@ transition={{
 </section>
 
 
-{/* 07. Testimonials ────────────────────────────── */}
+{/* 07. Expertise */}
+
+<ExpertiseSection />
+
+
+{/* 08. Testimonials ────────────────────────────── */}
 
 <TestimonialsSection />
 
       {/* Marquee before contact */}
       <MarqueeTicker />
 
-      {/* 06. Contact ─────────────────────────────────── */}
+      {/* 09. Contact ─────────────────────────────────── */}
       <ContactSection />
     </div>
   );
