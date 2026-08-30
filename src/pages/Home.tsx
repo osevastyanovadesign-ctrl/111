@@ -388,6 +388,7 @@ export default function Home() {
   const [language, setLanguage] = useState<Language>("RU");
 
   const t = translations[language];
+  console.log("CURRENT LANGUAGE:", language);
 
   useEffect(() => {
     const saved = localStorage.getItem("language");
@@ -579,7 +580,10 @@ return (
   {t.nav.contact}
 </a>
 
-  <LanguageSwitcher />
+  <LanguageSwitcher
+  language={language}
+  setLanguage={setLanguage}
+/>
 </div>
 
         </nav>
