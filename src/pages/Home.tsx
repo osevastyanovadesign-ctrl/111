@@ -9,6 +9,7 @@ import CustomCursor from "@/components/CustomCursor";
 import SectionIndicator from "@/components/SectionIndicator";
 import MarqueeTicker from "@/components/MarqueeTicker";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 import heroImage from "@assets/generated_images/hero-interior.jpg";
 import philosophyImage from "@assets/generated_images/moscow-3.jpg";
@@ -530,36 +531,39 @@ return (
 
 
           <div
-            className="
-              hidden md:flex
-              gap-12
-              font-mono
-              text-[0.65rem]
-              uppercase
-              tracking-[0.25em]
-            "
-          >
-            <a 
-              href="#projects" 
-              className="hover:opacity-50 transition-opacity"
-            >
-              Архив
-            </a>
+  className="
+    hidden md:flex
+    items-center
+    gap-12
+    font-mono
+    text-[0.65rem]
+    uppercase
+    tracking-[0.25em]
+  "
+>
+  <a 
+    href="#projects" 
+    className="hover:opacity-50 transition-opacity"
+  >
+    Архив
+  </a>
 
-            <a 
-              href="#expertise" 
-              className="hover:opacity-50 transition-opacity"
-            >
-              Экспертиза
-            </a>
+  <a 
+    href="#expertise" 
+    className="hover:opacity-50 transition-opacity"
+  >
+    Экспертиза
+  </a>
 
-            <a 
-              href="#contact" 
-              className="hover:opacity-50 transition-opacity"
-            >
-              Контакт
-            </a>
-          </div>
+  <a 
+    href="#contact" 
+    className="hover:opacity-50 transition-opacity"
+  >
+    Контакт
+  </a>
+
+  <LanguageSwitcher />
+</div>
 
         </nav>
 
