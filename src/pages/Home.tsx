@@ -553,25 +553,25 @@ return (
   "
 >
   <a 
-    href="#projects" 
-    className="hover:opacity-50 transition-opacity"
-  >
-    Архив
-  </a>
+  href="#projects" 
+  className="hover:opacity-50 transition-opacity"
+>
+  {t.nav.archive}
+</a>
 
-  <a 
-    href="#expertise" 
-    className="hover:opacity-50 transition-opacity"
-  >
-    Экспертиза
-  </a>
+<a 
+  href="#expertise" 
+  className="hover:opacity-50 transition-opacity"
+>
+  {t.nav.expertise}
+</a>
 
-  <a 
-    href="#contact" 
-    className="hover:opacity-50 transition-opacity"
-  >
-    Контакт
-  </a>
+<a 
+  href="#contact" 
+  className="hover:opacity-50 transition-opacity"
+>
+  {t.nav.contact}
+</a>
 
   <LanguageSwitcher />
 </div>
