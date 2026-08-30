@@ -1168,15 +1168,6 @@ transition={{
       className="md:col-span-6 -translate-y-12 md:-translate-y-8"
     >
 
-      <a
-        href="https://www.behance.net/cbacaf41"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="font-mono text-xs uppercase tracking-[0.3em] opacity-50 mb-10 -translate-y-4 inline-block hover:opacity-100 transition-opacity"
-      >
-        Behance
-      </a>
-
       <h2
         className="
           font-serif
@@ -1189,10 +1180,10 @@ transition={{
         "
       >
         Коммерческие и корпоративные проекты
-<br />
-<span className="inline-block mt-5 md:mt-8">
-  <ClientCycleWord />
-</span>
+        <br />
+        <span className="inline-block mt-5 md:mt-8">
+          <ClientCycleWord />
+        </span>
       </h2>
 
     </motion.div>
@@ -1201,19 +1192,19 @@ transition={{
     {/* Right — Image */}
 
     <motion.div
-  initial={{ opacity: 0 }}
-  whileInView={{ opacity: 1 }}
-  viewport={{ once: true }}
-  transition={{ duration: 1.2 }}
-  className="md:col-span-6 -translate-y-6 md:translate-y-0"
->
-  <CommercialProjectImage />
-</motion.div>
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.2 }}
+      className="md:col-span-6 -translate-y-6 md:translate-y-0"
+    >
+      <CommercialProjectImage />
+    </motion.div>
 
-</div>
+  </div>
 </section>
 
-    ```tsx
+
 {/* 06. About */}
 
 <section
@@ -1295,7 +1286,11 @@ transition={{
           leading-loose
         "
       >
-        Interior Design · Architecture
+        Архитектор и дизайнер интерьеров.
+        <br />
+        Частные и общественные пространства,
+        <br />
+        архитектура и предметная среда.
       </p>
 
       <a
@@ -1304,18 +1299,32 @@ transition={{
         rel="noopener noreferrer"
         className="
           inline-block
-          mt-10
-          font-mono
-          text-[0.6rem]
-          uppercase
-          tracking-[0.25em]
-          text-white/60
-          hover:text-white
-          transition-colors
+          mt-12
+          font-serif
+          text-5xl
+          md:text-7xl
+          italic
+          text-white
+          hover:opacity-50
+          transition-opacity
         "
       >
-        Behance →
+        BEHANCE
       </a>
+
+      <p
+        className="
+          mt-3
+          font-mono
+          text-[0.55rem]
+          md:text-[0.65rem]
+          uppercase
+          tracking-[0.18em]
+          text-white/50
+        "
+      >
+        Подробно о проектах и профессиональном опыте →
+      </p>
 
     </motion.div>
 
@@ -1340,8 +1349,10 @@ transition={{
 
 </section>
 
-      {/* 05. Testimonials ────────────────────────────── */}
-      <TestimonialsSection />
+
+{/* 07. Testimonials ────────────────────────────── */}
+
+<TestimonialsSection />
 
       {/* Marquee before contact */}
       <MarqueeTicker />
