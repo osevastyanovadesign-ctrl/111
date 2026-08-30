@@ -1293,38 +1293,50 @@ transition={{
         архитектура и предметная среда.
       </p>
 
-      <a
-        href="https://www.behance.net/cbacaf41"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="
-          inline-block
-          mt-12
-          font-serif
-          text-5xl
-          md:text-7xl
-          italic
-          text-white
-          hover:opacity-50
-          transition-opacity
-        "
-      >
-        BEHANCE
-      </a>
+      <div className="mt-12">
 
-      <p
-        className="
-          mt-3
-          font-mono
-          text-[0.55rem]
-          md:text-[0.65rem]
-          uppercase
-          tracking-[0.18em]
-          text-white/50
-        "
-      >
-        Подробно о проектах и профессиональном опыте →
-      </p>
+  <a
+    href="https://www.behance.net/cbacaf41"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex
+      items-baseline
+      gap-3
+      group
+    "
+  >
+    <span
+      className="
+        font-mono
+        text-[0.65rem]
+        md:text-xs
+        uppercase
+        tracking-[0.18em]
+        text-white/60
+        group-hover:text-white
+        transition-colors
+      "
+    >
+      Подробно о проектах и профессиональном опыте
+    </span>
+
+    <span
+      className="
+        font-serif
+        text-2xl
+        md:text-3xl
+        italic
+        text-white
+        group-hover:opacity-60
+        transition-opacity
+      "
+    >
+      Behance →
+    </span>
+  </a>
+
+</div>
 
     </motion.div>
 
