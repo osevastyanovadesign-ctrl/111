@@ -133,6 +133,52 @@ export const translations = {
       expertise: "Expertise",
       contact: "Contact",
     },
+    projectData: {
+  patriarshie: {
+    title: "Akadempark",
+    type: "Private House",
+    location: "Tulchino",
+    task: "Create a contemporary two-storey house in the Akadempark residential community, opening the architecture to its natural surroundings with panoramic views and functional spaces for everyday life.",
+    solution: "The architecture is organized around a double-height living room with panoramic glazing. The upper floor opens onto a balcony, while the accessible roof has been transformed into a full terrace for relaxation.",
+    result: "The house becomes an extension of the surrounding landscape: open, light and calm. The architecture frames the natural setting, while every space is oriented towards light, views and comfort.",
+  },
+
+  "villa-repino": {
+    title: "Yuzhnye Sady",
+    type: "Private Apartment",
+    location: "Moscow",
+    task: "Design the interior of a 50 m² apartment in the new Yuzhnye Sady residential complex in Moscow. The compact space is conceived as a coherent, light-filled interior without visual noise or unnecessary details.",
+    solution: "The interior is built around a warm neutral palette with light wood and stone textures. Mirrors and glass visually expand the space, while integrated storage keeps the lines clean. Graphic dark elements add depth and bring the composition together.",
+    result: "The apartment feels more spacious than its actual size. Everything essential is integrated into the architecture, while the restrained palette and natural textures create a calm, coherent atmosphere.",
+  },
+
+  "loft-arma": {
+    title: "Ryazanskoye Highway",
+    type: "Apartment",
+    location: "Novomoskovsk, Ryazanskoye Highway",
+    task: "Create a light and functional 100 m² apartment in Novomoskovsk, with a sense of openness, a unified social area and comfortable spaces for everyday life.",
+    solution: "The kitchen, dining area and living room are combined into one continuous space. The palette is based on white, warm beige and natural wood, complemented by marble surfaces. A graphic ceiling lighting system establishes rhythm and unifies the main areas.",
+    result: "The apartment feels light, coherent and calm: free from visual overload yet rich in expressive details. The space works as a unified system where functionality meets comfort and a sense of airiness.",
+  },
+
+  "penthouse-city": {
+    title: "Apartment in Yessentuki",
+    type: "Apartment",
+    location: "Yessentuki",
+    task: "Create a contemporary 80 m² apartment interior, integrating the balcony into the living space while preserving a sense of air and light.",
+    solution: "Large windows and the integrated balcony visually expand the space. Matte and glossy surfaces create a play of textures, while white brick adds character to the interior.",
+    result: "A light and coherent interior with a sense of openness, where contrasting textures meet architectural lightness.",
+  },
+
+  "country-retreat": {
+    title: "Krestovsky",
+    type: "Country House",
+    location: "Novomoskovsk",
+    task: "Create a contemporary country house interior in the Krestovsky residential community — light, calm and functional, with expressive details and a comfortable atmosphere for everyday life.",
+    solution: "The interior combines a soft natural palette with deep greens and blues, light surfaces and expressive lighting. Classical architectural details are integrated with contemporary furniture and restrained decorative elements.",
+    result: "The space feels coherent and harmonious: the restrained colour palette creates a sense of calm, while textures, light and accent elements add depth and individuality. The house feels contemporary, comfortable and carefully considered down to the smallest detail.",
+  },
+},
 
     hero: {
       category: "Interior Design",
