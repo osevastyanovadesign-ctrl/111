@@ -383,6 +383,12 @@ function AboutImage() {
 
 export default function Home() {
   console.log("HOME MOUNT");
+    const [language, setLanguage] = useState<Language>(() => {
+    const saved = localStorage.getItem("language");
+    return saved === "EN" ? "EN" : "RU";
+  });
+
+  const t = translations[language];
 
   const [introComplete, setIntroComplete] = useState(
   sessionStorage.getItem("returnTo") === "projects"
