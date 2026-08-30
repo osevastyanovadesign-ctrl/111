@@ -9,6 +9,7 @@ import CustomCursor from "@/components/CustomCursor";
 import SectionIndicator from "@/components/SectionIndicator";
 import MarqueeTicker from "@/components/MarqueeTicker";
 import TestimonialsSection from "@/components/TestimonialsSection";
+import LanguageSwitcher from "@/components/LanguageSwitcher";
 
 import heroImage from "@assets/generated_images/hero-interior.jpg";
 import philosophyImage from "@assets/generated_images/moscow-3.jpg";
@@ -21,11 +22,10 @@ import commercial05 from "@assets/generated_images/commercial-project-05.webp";
 import commercial06 from "@assets/generated_images/commercial-project-06.webp";
 import commercial07 from "@assets/generated_images/commercial-project-07.webp";
 import commercial08 from "@assets/generated_images/commercial-project-08.webp";
-import commercial09 from "@assets/generated_images/commercial-project-09.webp";
-import commercial10 from "@assets/generated_images/commercial-project-10.webp";
 
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
+import { translations, type Language } from "@/data/translations";
 
 
 const EASE: [number, number, number, number] = [
@@ -121,8 +121,6 @@ const COMMERCIAL_IMAGES = [
   commercial06,
   commercial07,
   commercial08,
-  commercial09,
-  commercial10,
 ];
 
 function ClientCycleWord() {
@@ -268,42 +266,46 @@ function AboutImage() {
     <div className="aspect-[4/5] overflow-hidden relative">
 
       {/* BLACK & WHITE */}
-      <img
-        src={aboutImage}
-        alt="Vladimir Sergeev — interior design"
-        className="
-          absolute
-          inset-0
-          w-full
-          h-full
-          object-cover
-          grayscale
-        "
-      />
+<img
+  src={aboutImage}
+  alt="Vladimir Sergeev — interior design"
+  className="
+    absolute
+    inset-0
+    w-full
+    h-full
+    object-cover
+    grayscale
+  "
+/>
 
-      {/* COLOR */}
-      <div
-        className="
-          absolute
-          inset-0
-          overflow-hidden
-          pointer-events-none
-        "
-        style={{
-          clipPath:
-            "polygon(58% 0, 100% 0, 100% 100%, 42% 100%)",
-        }}
-      >
-        <img
-          src={aboutImage}
-          alt=""
-          className="
-            w-full
-            h-full
-            object-cover
-          "
-        />
-      </div>
+{/* COLOR */}
+<motion.div
+  className="
+    absolute
+    inset-0
+    overflow-hidden
+    pointer-events-none
+  "
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true, amount: 0.4 }}
+  transition={{
+  duration: 5,
+  delay: 0.3,
+  ease: [0.16, 1, 0.3, 1],
+}}
+>
+  <img
+    src={aboutImage}
+    alt=""
+    className="
+      w-full
+      h-full
+      object-cover
+    "
+  />
+</motion.div>
 
       {/* SOFT TRANSITION */}
       <div
@@ -382,6 +384,16 @@ function AboutImage() {
 
 export default function Home() {
   console.log("HOME MOUNT");
+  const [language, setLanguage] = useState<Language>(() => {
+  const saved = localStorage.getItem("language");
+  return saved === "EN" ? "EN" : "RU";
+});
+
+const t = translations[language];
+
+useEffect(() => {
+  localStorage.setItem("language", language);
+}, [language]);
 
   const [introComplete, setIntroComplete] = useState(
   sessionStorage.getItem("returnTo") === "projects"
@@ -530,36 +542,39 @@ return (
 
 
           <div
-            className="
-              hidden md:flex
-              gap-12
-              font-mono
-              text-[0.65rem]
-              uppercase
-              tracking-[0.25em]
-            "
-          >
-            <a 
-              href="#projects" 
-              className="hover:opacity-50 transition-opacity"
-            >
-              Архив
-            </a>
+  className="
+    hidden md:flex
+    items-center
+    gap-12
+    font-mono
+    text-[0.65rem]
+    uppercase
+    tracking-[0.25em]
+  "
+>
+  <a 
+  href="#projects" 
+  className="hover:opacity-50 transition-opacity"
+>
+  {t.nav.archive}
+</a>
 
-            <a 
-              href="#expertise" 
-              className="hover:opacity-50 transition-opacity"
-            >
-              Экспертиза
-            </a>
+<a 
+  href="#expertise" 
+  className="hover:opacity-50 transition-opacity"
+>
+  {t.nav.expertise}
+</a>
 
-            <a 
-              href="#contact" 
-              className="hover:opacity-50 transition-opacity"
-            >
-              Контакт
-            </a>
-          </div>
+<a 
+  href="#contact" 
+  className="hover:opacity-50 transition-opacity"
+>
+  {t.nav.contact}
+</a>
+
+  <LanguageSwitcher />
+</div>
 
         </nav>
 
@@ -1293,38 +1308,50 @@ transition={{
         архитектура и предметная среда.
       </p>
 
-      <a
-        href="https://www.behance.net/cbacaf41"
-        target="_blank"
-        rel="noopener noreferrer"
-        className="
-          inline-block
-          mt-12
-          font-serif
-          text-5xl
-          md:text-7xl
-          italic
-          text-white
-          hover:opacity-50
-          transition-opacity
-        "
-      >
-        BEHANCE
-      </a>
+      <div className="mt-12">
 
-      <p
-        className="
-          mt-3
-          font-mono
-          text-[0.55rem]
-          md:text-[0.65rem]
-          uppercase
-          tracking-[0.18em]
-          text-white/50
-        "
-      >
-        Подробно о проектах и профессиональном опыте →
-      </p>
+  <a
+    href="https://www.behance.net/cbacaf41"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      inline-flex
+      items-baseline
+      gap-3
+      group
+    "
+  >
+    <span
+      className="
+        font-mono
+        text-[0.65rem]
+        md:text-xs
+        uppercase
+        tracking-[0.18em]
+        text-white/60
+        group-hover:text-white
+        transition-colors
+      "
+    >
+      Подробно о проектах и профессиональном опыте
+    </span>
+
+    <span
+      className="
+        font-serif
+        text-2xl
+        md:text-3xl
+        italic
+        text-white
+        group-hover:opacity-60
+        transition-opacity
+      "
+    >
+      Behance →
+    </span>
+  </a>
+
+</div>
 
     </motion.div>
 
@@ -1332,32 +1359,44 @@ transition={{
     {/* RIGHT — IMAGE */}
 
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1.2 }}
-      className="
-        md:col-span-6
-        -translate-y-6
-        md:translate-y-0
-      "
-    >
-      <AboutImage />
-    </motion.div>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1.2 }}
+  className="
+    md:col-span-6
+    -translate-y-6
+    md:translate-y-0
+  "
+>
+  <a
+    href="https://www.behance.net/cbacaf41"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block cursor-pointer"
+  >
+    <AboutImage />
+  </a>
+</motion.div>
 
   </div>
 
 </section>
 
 
-{/* 07. Testimonials ────────────────────────────── */}
+{/* 07. Expertise */}
+
+<ExpertiseSection />
+
+
+{/* 08. Testimonials ────────────────────────────── */}
 
 <TestimonialsSection />
 
       {/* Marquee before contact */}
       <MarqueeTicker />
 
-      {/* 06. Contact ─────────────────────────────────── */}
+      {/* 09. Contact ─────────────────────────────────── */}
       <ContactSection />
     </div>
   );
