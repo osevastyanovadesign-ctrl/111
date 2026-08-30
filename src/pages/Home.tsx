@@ -25,6 +25,7 @@ import commercial08 from "@assets/generated_images/commercial-project-08.webp";
 
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
+import { translations, type Language } from "@/data/translations";
 
 
 const EASE: [number, number, number, number] = [
@@ -383,6 +384,16 @@ function AboutImage() {
 
 export default function Home() {
   console.log("HOME MOUNT");
+  const [language, setLanguage] = useState<Language>(() => {
+  const saved = localStorage.getItem("language");
+  return saved === "EN" ? "EN" : "RU";
+});
+
+const t = translations[language];
+
+useEffect(() => {
+  localStorage.setItem("language", language);
+}, [language]);
 
   const [introComplete, setIntroComplete] = useState(
   sessionStorage.getItem("returnTo") === "projects"
