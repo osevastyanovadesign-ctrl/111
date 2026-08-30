@@ -21,8 +21,6 @@ import commercial05 from "@assets/generated_images/commercial-project-05.webp";
 import commercial06 from "@assets/generated_images/commercial-project-06.webp";
 import commercial07 from "@assets/generated_images/commercial-project-07.webp";
 import commercial08 from "@assets/generated_images/commercial-project-08.webp";
-import commercial09 from "@assets/generated_images/commercial-project-09.webp";
-import commercial10 from "@assets/generated_images/commercial-project-10.webp";
 
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
@@ -121,8 +119,6 @@ const COMMERCIAL_IMAGES = [
   commercial06,
   commercial07,
   commercial08,
-  commercial09,
-  commercial10,
 ];
 
 function ClientCycleWord() {
