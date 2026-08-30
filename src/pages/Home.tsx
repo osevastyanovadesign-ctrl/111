@@ -1344,18 +1344,25 @@ transition={{
     {/* RIGHT — IMAGE */}
 
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1.2 }}
-      className="
-        md:col-span-6
-        -translate-y-6
-        md:translate-y-0
-      "
-    >
-      <AboutImage />
-    </motion.div>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1.2 }}
+  className="
+    md:col-span-6
+    -translate-y-6
+    md:translate-y-0
+  "
+>
+  <a
+    href="https://www.behance.net/cbacaf41"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block cursor-pointer"
+  >
+    <AboutImage />
+  </a>
+</motion.div>
 
   </div>
 
