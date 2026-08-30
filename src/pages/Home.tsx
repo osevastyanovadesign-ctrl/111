@@ -668,8 +668,8 @@ return (
             className="md:col-span-6"
           >
             <p className="font-mono text-xs uppercase tracking-[0.3em] opacity-50 mb-10 -translate-y-4">
-              Philosophy
-            </p>
+  {t.philosophy.label}
+         </p>
 
             <h2
               className="
@@ -682,10 +682,10 @@ return (
                 md:translate-x-0
               "
             >
-              Пространство как
+              {t.philosophy.title}
               <br />
               <span className="italic">
-                <HeroCycleWord />
+              <HeroCycleWord />
               </span>
             </h2>
 
@@ -701,9 +701,9 @@ return (
                 leading-loose
               "
             >
-              Vladimir Sergeev
+              {t.philosophy.author}
               <br />
-              Interior Design · Architecture
+              {t.philosophy.description}
             </p>
           </motion.div>
 
