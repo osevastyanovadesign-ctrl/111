@@ -199,19 +199,139 @@ function CommercialProjectImage() {
       {/* SOFT EDGES */}
 
       {/* TOP */}
-<div
-  className="
-    absolute
-    top-0
-    left-0
-    right-0
-    h-16
-    pointer-events-none
-    bg-gradient-to-b
-    from-[#171715]
-    to-transparent
-  "
-/>
+      <div
+        className="
+          absolute
+          top-0
+          left-0
+          right-0
+          h-16
+          pointer-events-none
+          bg-gradient-to-b
+          from-[#171715]
+          to-transparent
+        "
+      />
+
+      {/* LEFT */}
+      <div
+        className="
+          absolute
+          inset-y-0
+          left-0
+          w-16
+          pointer-events-none
+          bg-gradient-to-r
+          from-[#171715]
+          to-transparent
+        "
+      />
+
+      {/* RIGHT */}
+      <div
+        className="
+          absolute
+          inset-y-0
+          right-0
+          w-16
+          pointer-events-none
+          bg-gradient-to-l
+          from-[#171715]
+          to-transparent
+        "
+      />
+
+      {/* BOTTOM */}
+      <div
+        className="
+          absolute
+          bottom-0
+          left-0
+          right-0
+          h-28
+          pointer-events-none
+          bg-gradient-to-t
+          from-[#171715]
+          to-transparent
+        "
+      />
+
+    </div>
+  );
+}
+function AboutImage() {
+  const aboutImage = PROJECTS[1]?.hero;
+
+  if (!aboutImage) return null;
+
+  return (
+    <div className="aspect-[4/5] overflow-hidden relative">
+
+      {/* BLACK & WHITE */}
+      <img
+        src={aboutImage}
+        alt="Vladimir Sergeev — interior design"
+        className="
+          absolute
+          inset-0
+          w-full
+          h-full
+          object-cover
+          grayscale
+        "
+      />
+
+      {/* COLOR */}
+      <div
+        className="
+          absolute
+          inset-0
+          overflow-hidden
+          pointer-events-none
+        "
+        style={{
+          clipPath:
+            "polygon(58% 0, 100% 0, 100% 100%, 42% 100%)",
+        }}
+      >
+        <img
+          src={aboutImage}
+          alt=""
+          className="
+            w-full
+            h-full
+            object-cover
+          "
+        />
+      </div>
+
+      {/* SOFT TRANSITION */}
+      <div
+        className="
+          absolute
+          inset-0
+          pointer-events-none
+        "
+        style={{
+          background:
+            "linear-gradient(90deg, transparent 38%, rgba(23,23,21,0.18) 48%, transparent 58%)",
+        }}
+      />
+
+      {/* TOP */}
+      <div
+        className="
+          absolute
+          top-0
+          left-0
+          right-0
+          h-16
+          pointer-events-none
+          bg-gradient-to-b
+          from-[#171715]
+          to-transparent
+        "
+      />
 
       {/* LEFT */}
       <div
