@@ -21,8 +21,6 @@ import commercial05 from "@assets/generated_images/commercial-project-05.webp";
 import commercial06 from "@assets/generated_images/commercial-project-06.webp";
 import commercial07 from "@assets/generated_images/commercial-project-07.webp";
 import commercial08 from "@assets/generated_images/commercial-project-08.webp";
-import commercial09 from "@assets/generated_images/commercial-project-09.webp";
-import commercial10 from "@assets/generated_images/commercial-project-10.webp";
 
 import { PROJECTS } from "@/data/projects";
 import { MATERIALS } from "@/data/materials";
@@ -121,8 +119,6 @@ const COMMERCIAL_IMAGES = [
   commercial06,
   commercial07,
   commercial08,
-  commercial09,
-  commercial10,
 ];
 
 function ClientCycleWord() {
@@ -293,10 +289,10 @@ function AboutImage() {
   whileInView={{ opacity: 1 }}
   viewport={{ once: true, amount: 0.4 }}
   transition={{
-    duration: 5,
-    delay: 0.3,
-    ease: [0.16, 1, 0.3, 1],
-  }}
+  duration: 5,
+  delay: 0.3,
+  ease: [0.16, 1, 0.3, 1],
+}}
 >
   <img
     src={aboutImage}
@@ -1348,32 +1344,44 @@ transition={{
     {/* RIGHT — IMAGE */}
 
     <motion.div
-      initial={{ opacity: 0 }}
-      whileInView={{ opacity: 1 }}
-      viewport={{ once: true }}
-      transition={{ duration: 1.2 }}
-      className="
-        md:col-span-6
-        -translate-y-6
-        md:translate-y-0
-      "
-    >
-      <AboutImage />
-    </motion.div>
+  initial={{ opacity: 0 }}
+  whileInView={{ opacity: 1 }}
+  viewport={{ once: true }}
+  transition={{ duration: 1.2 }}
+  className="
+    md:col-span-6
+    -translate-y-6
+    md:translate-y-0
+  "
+>
+  <a
+    href="https://www.behance.net/cbacaf41"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="block cursor-pointer"
+  >
+    <AboutImage />
+  </a>
+</motion.div>
 
   </div>
 
 </section>
 
 
-{/* 07. Testimonials ────────────────────────────── */}
+{/* 07. Expertise */}
+
+<ExpertiseSection />
+
+
+{/* 08. Testimonials ────────────────────────────── */}
 
 <TestimonialsSection />
 
       {/* Marquee before contact */}
       <MarqueeTicker />
 
-      {/* 06. Contact ─────────────────────────────────── */}
+      {/* 09. Contact ─────────────────────────────────── */}
       <ContactSection />
     </div>
   );
