@@ -291,9 +291,9 @@ function AboutImage() {
   "
   initial={{ opacity: 0 }}
   whileInView={{ opacity: 1 }}
-  viewport={{ once: true }}
+  viewport={{ once: true, amount: 0.4 }}
   transition={{
-    duration: 8,
+    duration: 5,
     ease: [0.16, 1, 0.3, 1],
   }}
 >
