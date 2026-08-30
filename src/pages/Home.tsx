@@ -293,7 +293,7 @@ function AboutImage() {
   whileInView={{ opacity: 1 }}
   viewport={{ once: true }}
   transition={{
-    duration: 3.5,
+    duration: 8,
     ease: [0.16, 1, 0.3, 1],
   }}
 >
