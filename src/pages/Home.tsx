@@ -1213,6 +1213,132 @@ transition={{
 </div>
 </section>
 
+    ```tsx
+{/* 06. About */}
+
+<section
+  className="
+    pt-32
+    md:pt-64
+    pb-20
+    md:pb-48
+    px-6
+    md:px-24
+    bg-[#171715]
+    text-white
+  "
+>
+
+  <div
+    className="
+      max-w-7xl
+      mx-auto
+      grid
+      grid-cols-1
+      md:grid-cols-12
+      gap-16
+      md:gap-24
+      items-center
+    "
+  >
+
+    {/* LEFT — ABOUT */}
+
+    <motion.div
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={TRANSITION}
+      className="
+        md:col-span-6
+        -translate-y-8
+        md:-translate-y-6
+      "
+    >
+
+      <p
+        className="
+          font-mono
+          text-xs
+          uppercase
+          tracking-[0.3em]
+          text-white/50
+          mb-10
+        "
+      >
+        Обо мне
+      </p>
+
+      <h2
+        className="
+          font-serif
+          text-[2.2rem]
+          md:text-6xl
+          leading-[0.95]
+          max-w-[85vw]
+          -translate-x-3
+          md:translate-x-0
+        "
+      >
+        Владимир Сергеев
+      </h2>
+
+      <p
+        className="
+          mt-8
+          font-mono
+          text-[0.58rem]
+          md:text-xs
+          uppercase
+          tracking-[0.18em]
+          text-white/60
+          leading-loose
+        "
+      >
+        Interior Design · Architecture
+      </p>
+
+      <a
+        href="https://www.behance.net/cbacaf41"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="
+          inline-block
+          mt-10
+          font-mono
+          text-[0.6rem]
+          uppercase
+          tracking-[0.25em]
+          text-white/60
+          hover:text-white
+          transition-colors
+        "
+      >
+        Behance →
+      </a>
+
+    </motion.div>
+
+
+    {/* RIGHT — IMAGE */}
+
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 1.2 }}
+      className="
+        md:col-span-6
+        -translate-y-6
+        md:translate-y-0
+      "
+    >
+      <AboutImage />
+    </motion.div>
+
+  </div>
+
+</section>
 
       {/* 05. Testimonials ────────────────────────────── */}
       <TestimonialsSection />
