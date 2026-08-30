@@ -673,7 +673,10 @@ return (
               {t.philosophy.title}
               <br />
               <span className="italic">
-              <HeroCycleWord language={language} />
+              <HeroCycleWord
+              words={t.philosophy.words}
+              language={language}
+              />
               </span>
             </h2>
 
