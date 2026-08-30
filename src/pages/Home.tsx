@@ -822,9 +822,12 @@ return (
             <div className="h-16 md:h-32" />
 
 
-            {PROJECTS.map((project, i) => (
+            {PROJECTS.map((project, i) => {
 
-            <div key={project.id}>
+           const projectText = t.projectData[project.slug];
+
+           return (
+          <div key={project.id}>
 
               <motion.div
 
@@ -965,7 +968,7 @@ transition={{
                       italic
                     "
                   >
-                    {project.title}
+                    {projectText.title}
                   </h4>
 
                   <p
