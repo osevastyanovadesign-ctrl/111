@@ -1,17 +1,14 @@
-import { useEffect, useState } from "react";
-import { translations, type Language } from "@/data/translations";
+import type { Language } from "@/data/translations";
 
-export default function LanguageSwitcher() {
-  const [language, setLanguage] = useState<Language>(() => {
-    const saved = localStorage.getItem("language");
+type LanguageSwitcherProps = {
+  language: Language;
+  setLanguage: (language: Language) => void;
+};
 
-    return saved === "EN" ? "EN" : "RU";
-  });
-
-  useEffect(() => {
-    localStorage.setItem("language", language);
-  }, [language]);
-
+export default function LanguageSwitcher({
+  language,
+  setLanguage,
+}: LanguageSwitcherProps) {
   return (
     <div className="flex items-center gap-3 font-mono text-[0.6rem] uppercase tracking-[0.2em]">
       <button
