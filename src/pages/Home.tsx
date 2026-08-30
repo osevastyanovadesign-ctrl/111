@@ -822,7 +822,10 @@ return (
             <div className="h-16 md:h-32" />
 
 
-            {PROJECTS.map((project, i) => (
+            {PROJECTS.map((project, i) => {
+            const projectText = t.projectData[project.slug];
+
+            return (
 
             <div key={project.id}>
 
