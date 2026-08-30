@@ -822,12 +822,9 @@ return (
             <div className="h-16 md:h-32" />
 
 
-            {PROJECTS.map((project, i) => {
+            {PROJECTS.map((project, i) => (
 
-           const projectText = t.projectData[project.slug];
-
-           return (
-          <div key={project.id}>
+            <div key={project.id}>
 
               <motion.div
 
@@ -968,7 +965,7 @@ transition={{
                       italic
                     "
                   >
-                    {projectText.title}
+                    {project.title}
                   </h4>
 
                   <p
@@ -1155,10 +1152,11 @@ transition={{
 
                           </div>
 
-                         </div>
-                        );
-                      })}
-                     </section>
+                          ))}
+
+
+                          </div>
+      </section>
 
       {/* 05. Коммерческие и корпоративные проекты */}
 
