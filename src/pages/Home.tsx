@@ -1323,15 +1323,15 @@ transition={{
 
     <span
   className="
-  font-mono
-  text-xl
-  md:text-2xl
-  uppercase
-  tracking-[0.18em]
-  text-white
-  group-hover:opacity-60
-  transition-opacity
-"
+    font-mono
+    text-lg
+    md:text-xl
+    uppercase
+    tracking-[0.18em]
+    text-white
+    group-hover:opacity-60
+    transition-opacity
+  "
 >
   BEHANCE →
 </span>
@@ -1356,14 +1356,16 @@ transition={{
   "
 >
   Личная страница{" "}
-  <span className="
-  font-mono
-  text-xl
-  md:text-2xl
-  uppercase
-  tracking-[0.18em]
-  text-white
-">
+  <span
+  className="
+    font-mono
+    text-lg
+    md:text-xl
+    uppercase
+    tracking-[0.18em]
+    text-white
+  "
+>
   ВКонтакте →
 </span>
 </a>
