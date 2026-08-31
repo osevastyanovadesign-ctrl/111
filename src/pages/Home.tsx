@@ -1337,6 +1337,27 @@ transition={{
   </a>
 
 </div>
+      <div className="mt-4">
+
+  <a
+    href="https://vk.ru/id271068896"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      font-mono
+      text-[0.65rem]
+      md:text-xs
+      uppercase
+      tracking-[0.18em]
+      text-white/60
+      hover:text-white
+      transition-colors
+    "
+  >
+    Личная страница ВКонтакте →
+  </a>
+
+</div>
 
     </motion.div>
 
