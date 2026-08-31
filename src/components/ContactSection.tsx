@@ -181,8 +181,10 @@ export default function ContactSection() {
           <div
   className="
     flex
-    justify-end
+    flex-col
+    items-end
     mb-4
+    gap-2
   "
 >
   <a
@@ -197,6 +199,23 @@ export default function ContactSection() {
     "
   >
     8-903-842-91-53
+  </a>
+
+  <a
+    href="https://vk.ru/id271068896"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="
+      font-mono
+      text-xs
+      uppercase
+      tracking-[0.18em]
+      text-white/50
+      hover:text-white
+      transition-colors
+    "
+  >
+    Написать в ВКонтакте →
   </a>
 </div>
           <h3
@@ -337,6 +356,19 @@ export default function ContactSection() {
                     transition-colors
                   "
                 />
+                <p
+  className="
+    mt-6
+    font-mono
+    text-[0.55rem]
+    uppercase
+    tracking-[0.12em]
+    text-white/30
+    leading-relaxed
+  "
+>
+  Ваши данные используются только для связи по вашему запросу.
+</p>
 
                 <div
                   className="
