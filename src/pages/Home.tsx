@@ -1322,40 +1322,51 @@ transition={{
     </span>
 
     <span
-      className="
-        font-serif
-        text-2xl
-        md:text-3xl
-        italic
-        text-white
-        group-hover:opacity-60
-        transition-opacity
-      "
-    >
-      Behance →
-    </span>
+  className="
+    font-mono
+    text-xl
+    md:text-2xl
+    uppercase
+    tracking-[0.18em]
+    text-white
+    group-hover:opacity-60
+    transition-opacity
+  "
+>
+  BEHANCE →
+</span>
   </a>
 
 </div>
       <div className="mt-4">
 
   <a
-    href="https://vk.ru/id271068896"
-    target="_blank"
-    rel="noopener noreferrer"
-    className="
-      font-mono
-      text-[0.65rem]
-      md:text-xs
-      uppercase
-      tracking-[0.18em]
-      text-white/60
-      hover:text-white
-      transition-colors
-    "
-  >
-    Личная страница ВКонтакте →
-  </a>
+  href="https://vk.ru/id271068896"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="
+    font-mono
+    text-[0.65rem]
+    md:text-xs
+    uppercase
+    tracking-[0.18em]
+    text-white/60
+    hover:text-white
+    transition-colors
+  "
+>
+  Личная страница{" "}
+  <span className="
+  font-mono
+  text-xl
+  md:text-2xl
+  uppercase
+  tracking-[0.18em]
+  text-white
+">
+  ВКонтакте →
+</span>
+</a>
 
 </div>
 
