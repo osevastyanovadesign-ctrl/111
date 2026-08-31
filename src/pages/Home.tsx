@@ -1323,15 +1323,15 @@ transition={{
 
     <span
   className="
-    font-mono
-    text-xl
-    md:text-2xl
-    uppercase
-    tracking-[0.18em]
-    text-white
-    group-hover:opacity-60
-    transition-opacity
-  "
+  font-mono
+  text-xl
+  md:text-2xl
+  uppercase
+  tracking-[0.18em]
+  text-white
+  group-hover:opacity-60
+  transition-opacity
+"
 >
   BEHANCE →
 </span>
