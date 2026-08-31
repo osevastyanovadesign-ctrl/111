@@ -1296,18 +1296,55 @@ transition={{
       <div className="mt-12">
 
   <a
-    href="https://www.behance.net/cbacaf41"
+  href="https://www.behance.net/cbacaf41"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="group block"
+>
+  <span
+    className="
+      block
+      font-mono
+      text-[0.65rem]
+      md:text-xs
+      uppercase
+      tracking-[0.18em]
+      text-white/60
+      group-hover:text-white
+      transition-colors
+    "
+  >
+    Подробно о проектах и профессиональном опыте
+  </span>
+
+  <span
+    className="
+      block
+      mt-1
+      font-mono
+      text-xl
+      md:text-2xl
+      uppercase
+      tracking-[0.18em]
+      text-white
+      group-hover:opacity-60
+      transition-opacity
+    "
+  >
+    BEHANCE →
+  </span>
+</a>
+
+<div className="mt-5">
+  <a
+    href="https://vk.ru/id271068896"
     target="_blank"
     rel="noopener noreferrer"
-    className="
-      inline-flex
-      items-baseline
-      gap-3
-      group
-    "
+    className="group block"
   >
     <span
       className="
+        block
         font-mono
         text-[0.65rem]
         md:text-xs
@@ -1318,56 +1355,26 @@ transition={{
         transition-colors
       "
     >
-      Подробно о проектах и профессиональном опыте
+      Личная страница
     </span>
 
     <span
-  className="
-    font-mono
-    text-xl
-    md:text-2xl
-    uppercase
-    tracking-[0.18em]
-    text-white
-    group-hover:opacity-60
-    transition-opacity
-  "
->
-  BEHANCE →
-</span>
+      className="
+        block
+        mt-1
+        font-mono
+        text-xl
+        md:text-2xl
+        uppercase
+        tracking-[0.18em]
+        text-white
+        group-hover:opacity-60
+        transition-opacity
+      "
+    >
+      ВКОНТАКТЕ →
+    </span>
   </a>
-
-</div>
-      <div className="mt-4">
-
-  <a
-  href="https://vk.ru/id271068896"
-  target="_blank"
-  rel="noopener noreferrer"
-  className="
-    font-mono
-    text-[0.65rem]
-    md:text-xs
-    uppercase
-    tracking-[0.18em]
-    text-white/60
-    hover:text-white
-    transition-colors
-  "
->
-  Личная страница{" "}
-  <span className="
-  font-mono
-  text-xl
-  md:text-2xl
-  uppercase
-  tracking-[0.18em]
-  text-white
-">
-  ВКонтакте →
-</span>
-</a>
-
 </div>
 
     </motion.div>
