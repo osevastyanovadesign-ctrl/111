@@ -1324,10 +1324,10 @@ transition={{
     <span
   className="
     font-mono
-    text-lg
-    md:text-xl
-    uppercase
-    tracking-[0.18em]
+text-[0.65rem]
+md:text-xs
+uppercase
+tracking-[0.18em]
     text-white
     group-hover:opacity-60
     transition-opacity
@@ -1359,10 +1359,10 @@ transition={{
   <span
   className="
     font-mono
-    text-lg
-    md:text-xl
-    uppercase
-    tracking-[0.18em]
+text-[0.65rem]
+md:text-xs
+uppercase
+tracking-[0.18em]
     text-white
   "
 >
