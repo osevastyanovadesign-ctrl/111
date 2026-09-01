@@ -57,7 +57,7 @@ function HeroCycleWord() {
 
     const id = setInterval(() => {
       setIndex(i => (i + 1) % CYCLE_WORDS.length);
-    }, 2600);
+    }, 2000);
 
 
     return () => clearInterval(id);
