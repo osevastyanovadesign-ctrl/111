@@ -167,7 +167,7 @@ function CommercialProjectImage() {
   useEffect(() => {
     const id = setInterval(() => {
       setIndex(i => (i + 1) % COMMERCIAL_IMAGES.length);
-    }, 4800);
+    }, 3600);
 
     return () => clearInterval(id);
   }, []);
